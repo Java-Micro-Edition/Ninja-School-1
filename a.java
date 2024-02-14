@@ -13,8 +13,11 @@ final class a implements CommandListener {
     public final void commandAction(Command var1, Displayable var2) {
         if (var1.getLabel().equals("Download")) {
             try {
-                this.a.platformRequest("http://");
-            } catch (ConnectionNotFoundException var3) {
+                this.a.platformRequest("https://www.google.com/");
+            } catch (ConnectionNotFoundException e) {
+                // Xử lý khi không thể kết nối
+            } catch (Exception e) {
+                // Xử lý khi có lỗi khác xảy ra
             }
         } else {
             this.a.notifyDestroyed();

@@ -1,3 +1,4 @@
+
 import java.util.Calendar;
 import java.util.Vector;
 import javax.microedition.lcdui.Command;
@@ -13,6 +14,7 @@ import javax.microedition.midlet.MIDlet;
 import javax.microedition.rms.RecordStore;
 
 public class Midlet extends MIDlet implements Runnable {
+
     static boolean a;
     static b b;
     static Midlet c;
@@ -38,7 +40,7 @@ public class Midlet extends MIDlet implements Runnable {
         try {
             j = new Image[3];
 
-            for(int var0 = 0; var0 < 3; ++var0) {
+            for (int var0 = 0; var0 < 3; ++var0) {
                 j[var0] = Image.createImage("/fs" + var0 + ".png");
             }
         } catch (Exception var3) {
@@ -67,8 +69,28 @@ public class Midlet extends MIDlet implements Runnable {
                     System.gc();
                 }
 
-                (s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + var0 + ".mid"), "audio/midi")).realize();
-                ((VolumeControl)s.getControl("VolumeControl")).setLevel(100);
+                switch (var0) {
+                case 0:
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + "TamLongSon" + ".mid"), "audio/midi");
+                    break;
+                case 1:
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + "TruocKhiEmTonTai" + ".mid"), "audio/midi");
+                    break;
+                case 2:
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + "Cupid" + ".mid"), "audio/midi");
+                    break;
+                case 3: 
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + "GhostCityTokyo" + ".mid"), "audio/midi");
+                    break;
+                case 4:
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + "HesAPirate" + ".mid"), "audio/midi");
+                    break;
+                default:
+                    s = Manager.createPlayer("".getClass().getResourceAsStream("/s/" + var0 + ".mid"), "audio/midi");
+                    break;
+                }
+                
+                ((VolumeControl) s.getControl("VolumeControl")).setLevel(100);
                 s.prefetch();
                 s.setLoopCount(1000);
                 t = var0;
@@ -90,7 +112,7 @@ public class Midlet extends MIDlet implements Runnable {
             var4 = var2 - (a(var1) >> 1);
         }
 
-        for(int var6 = 0; var6 < var5; ++var6) {
+        for (int var6 = 0; var6 < var5; ++var6) {
             if ((var2 = " 0123456789.,:!?()+-*/#$%abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(var1.charAt(var6))) == -1) {
                 var2 = 0;
             }
@@ -108,7 +130,7 @@ public class Midlet extends MIDlet implements Runnable {
         int var5 = var1.length();
         var4 = var2 - (c(var1) >> 1);
 
-        for(int var6 = 0; var6 < var5; ++var6) {
+        for (int var6 = 0; var6 < var5; ++var6) {
             if ((var2 = " 0123456789.,:!?()-'/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđĐ".indexOf(var1.charAt(var6))) == -1) {
                 var2 = 0;
             }
@@ -132,7 +154,7 @@ public class Midlet extends MIDlet implements Runnable {
             var5 = var3 - (d(var1) >> 1);
         }
 
-        for(int var7 = 0; var7 < var6; ++var7) {
+        for (int var7 = 0; var7 < var6; ++var7) {
             if ((var3 = "0123456789+-%$:abcdefghijklmnopqrstuvwxyz".indexOf(var1.charAt(var7))) == -1) {
                 var3 = 0;
             }
@@ -149,7 +171,7 @@ public class Midlet extends MIDlet implements Runnable {
     public static int a(String var0) {
         int var2 = 0;
 
-        for(int var3 = 0; var3 < var0.length(); ++var3) {
+        for (int var3 = 0; var3 < var0.length(); ++var3) {
             int var1;
             if ((var1 = " 0123456789.,:!?()+-*/#$%abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(var0.charAt(var3))) == -1) {
                 var1 = 0;
@@ -164,7 +186,7 @@ public class Midlet extends MIDlet implements Runnable {
     private static int c(String var0) {
         int var2 = 0;
 
-        for(int var3 = 0; var3 < var0.length(); ++var3) {
+        for (int var3 = 0; var3 < var0.length(); ++var3) {
             int var1;
             if ((var1 = " 0123456789.,:!?()-'/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđĐ".indexOf(var0.charAt(var3))) == -1) {
                 var1 = 0;
@@ -179,7 +201,7 @@ public class Midlet extends MIDlet implements Runnable {
     private static int d(String var0) {
         int var2 = 0;
 
-        for(int var3 = 0; var3 < var0.length(); ++var3) {
+        for (int var3 = 0; var3 < var0.length(); ++var3) {
             int var1;
             if ((var1 = "0123456789+-%$:abcdefghijklmnopqrstuvwxyz".indexOf(var0.charAt(var3))) == -1) {
                 var1 = 0;
@@ -238,7 +260,7 @@ public class Midlet extends MIDlet implements Runnable {
 
     public static void a(int var0) {
         byte[] var1;
-        (var1 = new byte[1])[0] = (byte)var0;
+        (var1 = new byte[1])[0] = (byte) var0;
         a("bg", var1);
     }
 
@@ -252,8 +274,8 @@ public class Midlet extends MIDlet implements Runnable {
             int var5 = 0;
             int var6 = 0;
 
-            while(true) {
-                while(a(var4) < var1) {
+            while (true) {
+                while (a(var4) < var1) {
                     var4 = var4 + var0.charAt(var6);
                     ++var6;
                     if (var0.charAt(var6) == '\n') {
@@ -268,7 +290,7 @@ public class Midlet extends MIDlet implements Runnable {
 
                 if (var6 != var3 - 1 && var0.charAt(var6 + 1) != ' ') {
                     int var8;
-                    for(var8 = var6; var0.charAt(var6 + 1) != '\n' && (var0.charAt(var6 + 1) != ' ' || var0.charAt(var6) == ' ') && var6 != var5; --var6) {
+                    for (var8 = var6; var0.charAt(var6 + 1) != '\n' && (var0.charAt(var6 + 1) != ' ' || var0.charAt(var6) == ' ') && var6 != var5; --var6) {
                     }
 
                     if (var6 == var5) {
@@ -281,7 +303,7 @@ public class Midlet extends MIDlet implements Runnable {
                     break;
                 }
 
-                for(var5 = var6 + 1; var5 != var3 - 1 && var0.charAt(var5) == ' '; ++var5) {
+                for (var5 = var6 + 1; var5 != var3 - 1 && var0.charAt(var5) == ' '; ++var5) {
                 }
 
                 if (var5 == var3 - 1) {
@@ -294,8 +316,8 @@ public class Midlet extends MIDlet implements Runnable {
 
             String[] var9 = new String[var2.size()];
 
-            for(int var7 = 0; var7 < var2.size(); ++var7) {
-                var9[var7] = (String)var2.elementAt(var7);
+            for (int var7 = 0; var7 < var2.size(); ++var7) {
+                var9[var7] = (String) var2.elementAt(var7);
             }
 
             return var9;
@@ -309,8 +331,8 @@ public class Midlet extends MIDlet implements Runnable {
         int var5 = 0;
         int var6 = 0;
 
-        while(true) {
-            while(c(var4) < var1) {
+        while (true) {
+            while (c(var4) < var1) {
                 var4 = var4 + var0.charAt(var6);
                 ++var6;
                 if (var6 == var3 - 1) {
@@ -320,7 +342,7 @@ public class Midlet extends MIDlet implements Runnable {
 
             if (var6 != var3 - 1 && var0.charAt(var6 + 1) != ' ') {
                 int var8;
-                for(var8 = var6; (var0.charAt(var6 + 1) != ' ' || var0.charAt(var6) == ' ') && var6 != var5; --var6) {
+                for (var8 = var6; (var0.charAt(var6 + 1) != ' ' || var0.charAt(var6) == ' ') && var6 != var5; --var6) {
                 }
 
                 if (var6 == var5) {
@@ -333,7 +355,7 @@ public class Midlet extends MIDlet implements Runnable {
                 break;
             }
 
-            for(var5 = var6 + 1; var5 != var3 - 1 && var0.charAt(var5) == ' '; ++var5) {
+            for (var5 = var6 + 1; var5 != var3 - 1 && var0.charAt(var5) == ' '; ++var5) {
             }
 
             if (var5 == var3 - 1) {
@@ -346,8 +368,8 @@ public class Midlet extends MIDlet implements Runnable {
 
         String[] var9 = new String[var2.size()];
 
-        for(int var7 = 0; var7 < var2.size(); ++var7) {
-            var9[var7] = (String)var2.elementAt(var7);
+        for (int var7 = 0; var7 < var2.size(); ++var7) {
+            var9[var7] = (String) var2.elementAt(var7);
         }
 
         return var9;
@@ -373,7 +395,7 @@ public class Midlet extends MIDlet implements Runnable {
             var2 = true;
         }
 
-        if (var2) {
+        /*if (var2) {
             c(2);
             Form var6;
             (var6 = new Form("Tea Mobile")).append("Vui lòng chuyển ngày trên điện thoại về ngày 19-5-2009 rồi tải lại trò chơi này và mở ra thì mới chơi được, chơi xong cài lại ngày hiện tại vẫn chơi bình thường.");
@@ -381,16 +403,16 @@ public class Midlet extends MIDlet implements Runnable {
             var6.addCommand(new Command("Exit", 7, 1));
             var6.setCommandListener(new a(this));
             Display.getDisplay(this).setCurrent(var6);
-        } else {
-            c(1);
-            Display.getDisplay(this).setCurrent(b);
-            b.s();
-        }
+        } else { */
+        c(1);
+        Display.getDisplay(this).setCurrent(b);
+        b.s();
+        //}
     }
 
     private static void c(int var0) {
         byte[] var1;
-        (var1 = new byte[1])[0] = (byte)var0;
+        (var1 = new byte[1])[0] = (byte) var0;
         a("nexpire", var1);
     }
 
@@ -419,7 +441,7 @@ public class Midlet extends MIDlet implements Runnable {
         try {
             Thread.sleep(200L);
             Thread.yield();
-            b.x = b.a((int)System.currentTimeMillis() % 1000);
+            b.x = b.a((int) System.currentTimeMillis() % 1000);
             b.S = 30;
             Thread.yield();
             b.m(b.w);
@@ -477,7 +499,7 @@ public class Midlet extends MIDlet implements Runnable {
                     if (b.t == null) {
                         b.t = new Image[4];
 
-                        for(var4 = 0; var4 < 4; ++var4) {
+                        for (var4 = 0; var4 < 4; ++var4) {
                             b.t[var4] = Image.createImage("/bg" + var4 + g + ".png");
                         }
                     }
@@ -598,7 +620,7 @@ public class Midlet extends MIDlet implements Runnable {
             c.c();
         }
 
-        while(b.T < 90) {
+        while (b.T < 90) {
             Thread.yield();
         }
 
