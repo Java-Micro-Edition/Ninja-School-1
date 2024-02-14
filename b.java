@@ -1,6 +1,10 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 import java.io.IOException;
 import java.io.InputStream;
-import javax.bluetooth.LocalDevice;
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -25,7 +29,26 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int[] ai = new int[]{3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
     private static int[] aj = new int[]{50, 150, 240, 400, 600, 800, 1000, 1500, 2000, 3000, 5000, 7000, 9000, 12000, 15000, 19000, 26000, 32000, 40000, 50000, 60000, 70000, 80000, 90000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000};
     private static int[] ak = new int[]{20, 20, 20, 20, 30, 30, 30, 40, 40, 50, 60, 70, 80, 80, 90, 90, 100, 120, 130, 150, 160, 170, 180, 190, 200, 210, 220, 250, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300};
-    private static String[] al = new String[]{"Ma một mắt", "ốc sên", "Dơi quỷ", "Quỷ một chân", "Cóc xanh", "Nhện", "Ong bò vẽ", "Bù nhìn rơm", "Cá cọp", "Ninja gió", "Cá cọp đỏ", "Ma một mắt", "Rết sa mạc", "Dơi vàng", "Chuột", "Thổ dân", "Ong đỏ", "Bò cạp", "Quỷ hoa", "Quỷ tử hoa"};
+    private static String[] al = new String[]{"Ma một mắt", 
+        "ốc sên", 
+        "Dơi quỷ", 
+        "Quỷ một chân", 
+        "Cóc xanh", 
+        "Nhện", 
+        "Ong bò vẽ", 
+        "Bù nhìn rơm", 
+        "Cá cọp", 
+        "Ninja gió", 
+        "Cá cọp đỏ", 
+        "Ma một mắt", 
+        "Rết sa mạc", 
+        "Dơi vàng", 
+        "Chuột", 
+        "Thổ dân", 
+        "Ong đỏ", 
+        "Bò cạp", 
+        "Quỷ hoa", 
+        "Quỷ tử hoa"};
     private static int[] am = new int[]{140, 70, 150, 120, 150, 150, 60, 1000, 250, 500, 4000, 500, 600, 1000, 1500, 2000, 1000, 3500, 1500, 5500};
     private static int[] an = new int[]{15, 10, 30, 25, 25, 25, 5, 10, 20, 40, 30, 40, 130, 30, 40, 100, 60, 160, 120, 200};
     private static int[] ao = new int[]{35, 20, 55, 40, 45, 50, 30, 130, 60, 65, 70, 75, 120, 85, 100, 120, 140, 160, 180, 200};
@@ -44,10 +67,144 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int[][] aB = new int[][]{{1344, 288}, {816, 48}, {816, 192}, {744, 192}, {144, 264}, {1440, 96}, {1368, 288}, {1128, 288}, {840, 312}};
     private static int[] aC = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 4, 0, 3, 0, 6, 0, 2, 0, 5, 0, 4, 0, 1, 0, 3, 0, 0, 0, 5, 0, 4, 0, 3, 0, 2, 0, 2, 0, 1, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 2, 1, 3, 2, 2};
     private static int[] aD = new int[]{0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 2, 0, 2, 3, 0, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 4, 0, 4, 0, 1, 2, 1, 2, 0, 1, 2, 1, 2, 1, 2};
-    private static String[] aE = new String[]{"Chơi mới", "Chơi tiếp", "Chỉ dẫn", "Game khác", "Thoát"};
-    private static String[][] aF = new String[][]{{"Rừng trúc đây rồi!", "Hôm nay ta phải hạ được con quái vật đó!", "Nó chắc quanh quẩn đây thôi!"}, {"Bọn quái vật nhãi nhép này làm gì được ta chứ!"}, {"Con quái vật hung hăng kia rồi!", "Ngươi phải đền tội vì những gì gây ra!"}, {"Này các con, sau bao năm tháng tập luyện...", "Đây là lúc các con thể hiện tài năng!", "Gần đây, trong khu rừng trúc...", "..xuất hiện 1 con quái vật to lớn..", "Nó thường phá phách, đe dọa dân làng.", "Các con biết phải làm gì rồi chứ?", "Đây là lúc các con chứng minh khả năng của mình.. ", "Đi đi. Và hãy cẩn thận đấy !!"}, {"Chết đi, con quái vật hung hăng kia !!!", "Hahahaha!"}, {"Chào mừng ngươi đến với trường đào tạo ninja Hirosaki.", "Ta là Okamesama, hiệu trưởng trường này.", "Tại đây chúng ta sẽ đào tạo các ngươi, trở thành những ninja chuyên nghiệp.", "Giáo viên chủ nhiêm của ngươi là thầy Takanashi", "Hãy đến gặp thầy để nhận bài tập.", "Có vấn đề gì, ngươi có thể hỏi những đồng môn của mình.", "Chúc ngươi sớm đạt được thành công nhé."}, {"Vâng, thưa thầy!"}, {"Con đường hoa đào đây rồi.", "Con bé ấy đâu rồi nhỉ?"}, {"Chào bạn! Bạn có phải là em gái cô Ayumi không?", "Thầy Takanashi bận nên nhờ mình đón bạn giúp.", "Đi theo mình nhé, chúng ta sẽ về trường!"}, {"Tốt lắm, con đã đưa cô bé về an toàn!", "Đây ta có món quà gì giá trị để tặng con..", "Đây là tấm bằng lái xe có chữ ký của ta. Kể từ nay con có thể sử dụng những chiếc xe máy rồi!", "Nhớ phải lái cẩn thận và đội mũ bảo hiểm, nếu không là CSGT phạt đó!"}, {"Thuỷ quái hạ nguồn sông Waramato, con quái trong truyền thuyết !", "Một khi nó chưa bị tiêu diệt, ta sẽ không đi tiếp!"}, {"Chết đi, con quái vật kia!", "Từ nay con sông này sẽ trở lại thanh bình rồi!", "Ta tiếp tục cuộc hành trình thôi!"}, {"Ngươi cũng lặn lội đến tận đây được à, khá đấy!", "Hãy bỏ ngôi trường ấy đi, theo ta lập căn cứ, ngươi sẽ có tất cả.", "Nếu không theo ta, ngươi sẽ hối hận đấy... HaHaHa!"}, {"Không đời nào, tên phản bội kia!"}, {"Ngươi khá lắm! Hãy đợi đấy, ta sẽ nhớ mối thù này!", "Hẹn gặp lại ngươi!!!"}, {"Chúng ta lại gặp nhau rồi!", "Ta cho ngươi một cơ hội lần cuối. hãy theo ta, hoặc là chết!"}, {"Haha. Tên phản bội kia, ta sẽ cho mi biết sức mạnh một ninja thực thụ!"}, {"Cuối cùng thì mi cũng đã phải dền tội!"}, {"Các con hãy cho biết làm cách nào để di chuyển!"}, {"Sử dụng phím mũi tên hoặc phím 2,4,6,8!"}, {"Làm thế nào để tấn công?, Kunio"}, {"Sử dụng phím 5 hoặc phím chọn giữa!"}, {"Làm thế nào để trò chuyện với bạn bè hoặc thầy cô?,Lee"}, {"Đứng gần người đó rồi bấm Giao Tiếp!"}, {"Làm thế nào để biết mình đang ở đâu! Katashi"}, {"Chọn menu/Xem bản đồ!"}, {"Làm thế nào khi hết HP hoặc MP! Toniku"}, {"Chọn menu/Sử dụng Item, chọn một bình HP/MP để sử dụng!"}, {"Uhm..Nếu không còn bình HP/MP nào thì sao? Minori"}, {"Gặp ông bán hàng mua tại trường, ở gần ký túc xá!"}, {"Tốt. Làm thế nào để di chuyển nhanh từ khu vực này đến khu vực khác?"}, {"Mở bản đồ, chọn 1 địa điểm để di chuyển đến!"}, {"Đúng rồi, Làm sao để sử dụng phi tiêu?,Ryuu"}, {"Bấm phím 1 sẽ chuyển sang chế độ phi tiêu.", "Bấm phím 1 lần nữa để quay lại đánh kiếm!"}, {"Tốt. Làm sao để sử dụng khinh công?"}, {"Học khinh công từ cô Ayumi. Bấm phím mũi tên lên hoặc phím 2 nhiều lần!"}, {"Uhm..Làm sao để độn thổ!"}, {"Học độn thổ từ thầy Honda. Bấm và giữ luôn phím xuống hoặc phím 8!"}, {"Khi nào mới có thể lái xe môtô?"}, {"Học lái xe từ thầy Takanashi, được cấp bằng lái", "Sau đó có thể nhảy lên chạy bất kỳ chiếc mô tô nào !"}, {"Làm sao để chạy trên mặt nước? huh ? Sadao"}, {"Học thuật chạy nước/ lặn nước từ thầy Honda! Sau đó có thể chạy trên mặt nước!"}, {"Làm sao để biến hình!"}, {"Bấm phím 7. Sau khi đã học phép biến hình từ thầy Hiroyaki"}, {"Làm sao để tàng hình!"}, {"Bấm phím 3. Sau khi đã học phép tàng hình từ thầy Honda"}, {"Tốt! Cho ta biết ai phát triển game này!"}, {"Nhóm TeaMobile!"}, {"Cụ thể là ai?"}, {"...Con không biết..."}, {"Hmm, có thể tìm thêm nhiều game hay khác ở đâu?"}, {"www.teamobi.com hay www.wap.teamobi.com"}, {"Tốt, các con có thể giải tán !"}, {"Chúng con chào thầy !"}, {"Cảm ơn, mi thật tốt bụng. Hẹn gặp lại!", "Quên mất, lúc nãy cô Ayumi dặn ta gặp cô ấy ngay.", "Hihi, gặp lại mi sau!"}, {"Sakura, bạn có sao không!"}, {"Mình không sao, bạn không bị thương chứ!"}, {"Mình cũng không sao! Tên Toniku chắc cũng không chạy xa được đâu , hắn cũng sớm bị bắt thôi!", "Chúng ta về thôi!"}, {"Toniku, ngươi đã biết tội chưa!"}, {"..vâng..con biết...."}, {"Theo nội quy của nhà trường. Ngươi phải rời khỏi ngôi trường này.", "Vĩnh viễn không được trở lại nữa.."}, {"......"}, {"Thưa thầy...", "Toniku vốn là học sinh giỏi của trường..", " Chỉ vì nghe lời xúi giục của bọn xấu nên mới hành động như thế...", "Đây là lần vi phạm đầu tiên, xin nhà trường tha thứ cho bạn ấy..."}, {"......"}, {"Xin các thầy hãy tha thứ cho bạn ấy ạ!"}, {"..thôi được rồi..", "Tội Toniku rất nặng, đáng lẽ ra phải bị đuổi học.", "Con đường để thành một nhẫn giả thật gian lao và chông gai..", "..ngươi phải luyện tập bằng khả năng và sức lực của mình", " sẽ không có con đường nào khác", " ... các con đều biết chữ Nhẫn gồm chữ Đao và chữ Tâm.", "..nếu Tâm không tịnh thì Đao sẽ bổ xuống!", "Các con hãy lấy Toniku mà làm gương ...", "Toniku, ngươi đã quá tham lam...", "..nhưng ta cũng thây nơi con người ngươi có tố chất tiềm tàng!", "Nên ta quyết định tha cho con lần này...", "Sẽ không có lần sau, Toniku, ngươi nhớ đấy!!"}, {"Vâng, con xin cảm ơn thầy!"}, {"Sẵn đây ta muốn nhắc nhở thêm các con..", "Hai tháng nữa là đến kỳ thi kết khoá cho Genin. Các con phải cố gắng tập luyện hơn nữa..", "..Mọi thứ chỉ mới bắt đầu thôi!"}, {"Vâng, chúng con xin nghe!"}};
-    private static String[] aG = new String[]{"Trường đạo tạo Ninja Hirosaki, Mùa thu 1937", "2 ngày sau, tại rừng trúc...", "Chỉ dẫn: Dùng phím 5 để tấn công.", "6 tháng trước, tại trường Hirosaki...", "2 ngày sau, tại trường Hirosaki..."};
-    private static String[][] aH = new String[][]{{"Chúng ta đi thôi!"}, {"Muốn rủ ta đi chơi à!", "Ta chỉ chơi với những người cùng trình độ thôi.", "Ngươi hãy tập luyện đi, bao giờ khá hơn thì quay lại. Đừng ở đó tán gái nữa!"}, {"Muốn rủ ta cùng đi à?", "OK, nhưng chỉ một lúc thôi nhé, nếu không chị Ayumi mắng ta đó!"}, {"Ta muốn đến miếu Koujin chơi, mi có thể dẫn đường chứ!", "Nếu sợ, mi có thể ở nhà, ta sẽ tự đi. Haha!"}};
+    private static String[] aE = new String[]{"Chơi mới", 
+        "Chơi tiếp", 
+        "Chỉ dẫn", 
+        "Game khác", 
+        "Thoát"};
+    private static String[][] aF = new String[][]{{"Rừng trúc đây rồi!", 
+            "Hôm nay ta phải hạ được con lon đó!", 
+            "Nó chắc quanh quẩn đây thôi!"}, 
+        {"Bọn quái vật nhãi nhép này làm gì được ta chứ!"}, 
+        {"Con lon hung hăng kia rồi!", 
+            "Ngươi phải đền tội vì phải giết ngươi mà tao ko đc đi xem concert của Rồng Tưởng Tượng!"}, 
+        {"Này các con, sau bao năm tháng tập luyện...", 
+            "Đây là lúc các con thể hiện tài năng!", 
+            "Gần đây, trong khu rừng trúc...", 
+            "..xuất hiện 1 con lon to ..", 
+            "Nó thường phá phách, đe dọa dân làng.", 
+            "Các con biết phải làm gì rồi chứ?", 
+            "Đây là lúc các con chứng minh khả năng của mình.. ", 
+            "Đi đi. Và hãy cẩn thận đấy !!"}, 
+        {"Chết đi, con quái vật hung hăng kia !!!", 
+            "Hahahaha!"}, 
+        {"Chào mừng ngươi đến với trường đào tạo ninja Hirosaki.", 
+            "Ta là Okamesama, hiệu trưởng trường này.", 
+            "Tại đây chúng ta sẽ đào tạo các ngươi, trở thành những ninja chuyên nghiệp.", 
+            "Giáo viên chủ nhiêm của ngươi là thầy Takanashi", 
+            "Hãy đến gặp thầy để nhận bài tập.", 
+            "Có vấn đề gì, ngươi có thể hỏi những đồng môn của mình.", 
+            "Chúc ngươi sớm đạt được thành công nhé."}, 
+        {"Vâng, thưa thầy!"}, 
+        {"Con đường hoa đào đây rồi.", 
+            "Con bé ấy đâu rồi nhỉ?"}, 
+        {"Chào bạn! Bạn có phải là em gái cô Ayumi không?", 
+            "Thầy Takanashi bận nên nhờ mình đón bạn giúp.", 
+            "Đi theo mình nhé, chúng ta sẽ về trường!"}, 
+        {"Tốt lắm, con đã đưa cô bé về an toàn!", 
+            "Đây ta có món quà gì giá trị để tặng con..", 
+            "Đây là tấm bằng lái xe có chữ ký của ta. Kể từ nay con có thể sử dụng những chiếc xe máy rồi!", 
+            "Nhớ phải lái cẩn thận và đội mũ bảo hiểm, nếu không là CSGT phạt đó!"}, 
+        {"Thuỷ quái hạ nguồn sông Waramato, con quái trong truyền thuyết !", 
+            "Một khi nó chưa bị tiêu diệt, ta sẽ không đi tiếp!"}, 
+        {"Chết đi, con quái vật kia!", 
+            "Từ nay con sông này sẽ trở lại thanh bình rồi!", 
+            "Ta tiếp tục cuộc hành trình thôi!"}, 
+        {"Ngươi cũng lặn lội đến tận đây được à, khá đấy!", 
+            "Hãy bỏ ngôi trường ấy đi, theo ta lập căn cứ, ngươi sẽ có tất cả.", 
+            "Nếu không theo ta, ngươi sẽ hối hận đấy... HaHaHa!"}, 
+        {"Không đời nào, tên phản bội kia!"}, 
+        {"Ngươi khá lắm! Hãy đợi đấy, ta sẽ nhớ mối thù này!", 
+            "Hẹn gặp lại ngươi!!!"}, 
+        {"Chúng ta lại gặp nhau rồi!", 
+            "Ta cho ngươi một cơ hội lần cuối. hãy theo ta, hoặc là chết!"}, 
+        {"Haha. Tên phản bội kia, ta sẽ cho mi biết sức mạnh một ninja thực thụ!"}, 
+        {"Cuối cùng thì mi cũng đã phải dền tội!"}, 
+        {"Các con hãy cho biết làm cách nào để di chuyển!"}, 
+        {"Sử dụng phím mũi tên hoặc phím 2,4,6,8!"}, 
+        {"Làm thế nào để tấn công?, Kunio"}, 
+        {"Sử dụng phím 5 hoặc phím chọn giữa!"}, 
+        {"Làm thế nào để trò chuyện với bạn bè hoặc thầy cô?,Lee"}, 
+        {"Đứng gần người đó rồi bấm Giao Tiếp!"}, 
+        {"Làm thế nào để biết mình đang ở đâu! Katashi"}, 
+        {"Chọn menu/Xem bản đồ!"}, 
+        {"Làm thế nào khi hết HP hoặc MP! Toniku"}, 
+        {"Chọn menu/Sử dụng Item, chọn một bình HP/MP để sử dụng!"}, 
+        {"Uhm..Nếu không còn bình HP/MP nào thì sao? Minori"}, 
+        {"Gặp ông bán hàng mua tại trường, ở gần ký túc xá!"}, 
+        {"Tốt. Làm thế nào để di chuyển nhanh từ khu vực này đến khu vực khác?"}, 
+        {"Mở bản đồ, chọn 1 địa điểm để di chuyển đến!"}, 
+        {"Đúng rồi, Làm sao để sử dụng phi tiêu?,Ryuu"}, 
+        {"Bấm phím 1 sẽ chuyển sang chế độ phi tiêu.", 
+            "Bấm phím 1 lần nữa để quay lại đánh kiếm!"}, 
+        {"Tốt. Làm sao để sử dụng khinh công?"}, 
+        {"Học khinh công từ cô Ayumi. Bấm phím mũi tên lên hoặc phím 2 nhiều lần!"}, 
+        {"Uhm..Làm sao để độn thổ!"}, 
+        {"Học độn thổ từ thầy Honda. Bấm và giữ luôn phím xuống hoặc phím 8!"}, 
+        {"Khi nào mới có thể lái xe môtô?"}, 
+        {"Học lái xe từ thầy Takanashi, được cấp bằng lái", 
+            "Sau đó có thể nhảy lên chạy bất kỳ chiếc mô tô nào !"}, 
+        {"Làm sao để chạy trên mặt nước? huh ? Sadao"}, 
+        {"Học thuật chạy nước/ lặn nước từ thầy Honda! Sau đó có thể chạy trên mặt nước!"}, 
+        {"Làm sao để biến hình!"}, 
+        {"Bấm phím 7. Sau khi đã học phép biến hình từ thầy Hiroyaki"}, 
+        {"Làm sao để tàng hình!"}, 
+        {"Bấm phím 3. Sau khi đã học phép tàng hình từ thầy Honda"}, 
+        {"Tốt! Cho ta biết ai ăn cắp game này xong phát hành lậu!"}, 
+        {"Nhóm DuriuStudio!"}, 
+        {"Cụ thể là ai?"}, 
+        {"Kệ mẹ chúng nó, hu at hu ce!"}, 
+        {"Vậy chúng ta ăn cắp lại code của chúng nó ở đâu?"}, 
+        {"Trên Page FB DuriuStudio chúng nó hay đăng code với mấy cái xàm vl!"}, 
+        {"Tốt, các con có thể giải tán!"}, 
+        {"Chúng con chào thầy !"}, 
+        {"Cảm ơn, mi thật tốt bụng. Hẹn gặp lại!", 
+            "Quên mất, lúc nãy cô Ayumi dặn ta gặp cô ấy ngay.", 
+            "Hihi, gặp lại mi sau!"}, 
+        {"Sakura, bạn có sao không!"}, 
+        {"Mình không sao, bạn không bị thương chứ!"}, 
+        {"Mình cũng không sao! Tên Toniku chắc cũng không chạy xa được đâu , hắn cũng sớm bị bắt thôi!", 
+            "Chúng ta về thôi!"}, 
+        {"Toniku, ngươi đã biết tội chưa!"}, 
+        {"..vâng..con biết...."}, 
+        {"Theo nội quy của nhà trường. Ngươi phải rời khỏi ngôi trường này.", 
+            "Vĩnh viễn không được trở lại nữa.."}, 
+        {"......"}, 
+        {"Thưa thầy...", 
+            "Toniku vốn là học sinh giỏi của trường..", 
+            " Chỉ vì nghe lời xúi giục của bọn xấu nên mới hành động như thế...", 
+            "Đây là lần vi phạm đầu tiên, xin nhà trường tha thứ cho bạn ấy..."}, 
+        {"......"}, 
+        {"Xin các thầy hãy tha thứ cho bạn ấy ạ!"}, 
+        {"..thôi được rồi..", "Tội Toniku rất nặng, đáng lẽ ra phải bị đuổi học.", 
+            "Con đường để thành một nhẫn giả thật gian lao và chông gai..", 
+            "..ngươi phải luyện tập bằng khả năng và sức lực của mình", 
+            " sẽ không có con đường nào khác", 
+            " ... các con đều biết chữ Nhẫn gồm chữ Đao và chữ Tâm.", 
+            "..nếu Tâm không tịnh thì Đao sẽ bổ xuống!", 
+            "Các con hãy lấy Toniku mà làm gương ...", 
+            "Toniku, ngươi đã quá tham lam...", 
+            "..nhưng ta cũng thây nơi con người ngươi có tố chất tiềm tàng!", 
+            "Nên ta quyết định tha cho con lần này...", 
+            "Sẽ không có lần sau, Toniku, ngươi nhớ đấy!!"}, 
+        {"Vâng, con xin cảm ơn thầy!"}, 
+        {"Sẵn đây ta muốn nhắc nhở thêm các con..", 
+            "Hai tháng nữa là đến kỳ thi kết khoá cho Genin. Các con phải cố gắng tập luyện hơn nữa..", 
+            "..Mọi thứ chỉ mới bắt đầu thôi!"}, 
+        {"Vâng, chúng con xin nghe!"}};
+    private static String[] aG = new String[]{"Trường đạo tạo Ninja Hirosaki, Mùa thu 1937", 
+            "2 ngày sau, tại rừng trúc...", 
+            "Chỉ dẫn: Dùng phím 5 để tấn công.", 
+            "6 tháng trước, tại trường Hirosaki...", 
+            "2 ngày sau, tại trường Hirosaki..."};
+    private static String[][] aH = new String[][]{{"Chúng ta đi thôi!"}, 
+        {"Muốn rủ ta đi chơi à!", 
+            "Ta chỉ chơi với những người có hơn 5 triệu lực chiến trong Rise of Kingdom thôi.", 
+            "Ngươi hãy nạp tiền đi, bao giờ nhiều lực chiến hơn thì quay lại!"}, 
+        {"Muốn rủ ta cùng đi à?", 
+            "OK, nhưng chỉ một lúc thôi nhé, nếu không chị Ayumi mắng ta đó!"}, 
+        {"Ta muốn đến miếu Koujin chơi, mi có thể dẫn đường chứ!", 
+            "Nếu sợ, mi có thể ở nhà, ta sẽ tự đi. Haha!"}};
     private static int[][][] aI;
     private static int[] aJ;
     private static int[] aK;
@@ -202,7 +359,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int[] dl;
     private static int[] dm;
     private static boolean dn;
-    private static int do;
+    private static int doSt;
     private static int dp;
     private static int dq;
     private static int dr;
@@ -478,7 +635,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int ic;
     private static int id;
     private static boolean ie;
-    private static int if;
+    private static int ifSt;
     private static int ig;
     private static int ih;
     private static int ii;
@@ -778,7 +935,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         ku = new String[][]{{"2000vnđ / 50 bình", "3000vnđ / 50 bình", "3000vnđ / 30 bình", "2000vnđ / 50 bình", "2000vnđ / 30 bình", "3000vnđ / 50 bình"}, {"2000vnđ", "3000vnđ", "3000vnđ", "5000vnđ"}};
         kv = new int[][]{{200, 600, 1500, 200, 600, 1200}, {2000, 12000, 45000, 182000}};
         kx = new String[][]{{"BinhHP_Nho(50)", "BinhHP_Vua(50)", "BinhHP_To(30)", "BinhMP_Nho(50)", "BinhMP_Vua(30)", "BinhMP_To(50)"}, {"KiemTre", "ThuyLinhKiem", "HoaGiacKiem", "LongGiaoKiem"}};
-        ky = new String[][]{{"sms://8200", "sms://8300", "sms://8300", "sms://8200", "sms://8200", "sms://8200"}, {"sms://8100", "sms://8300", "sms://8400", "sms://8500"}};
+        ky = new String[][]{{"sms://", "sms://", "sms://", "sms://", "sms://", "sms://"}, {"sms://", "sms://", "sms://", "sms://"}};
         kD = new int[]{12281360, 13859359, 15439166, 16693877, 16765346, 16777215, 16765346, 16693877, 15439166, 13859359, 12281360};
         kE = new String[]{"Bình HP nhỏ", "Bình HP vừa", "Bình HP to", "Bình MP nhỏ", "Bình MP vừa", "Bình MP to"};
         W = new int[]{5, 2, 1, 5, 2, 1};
@@ -795,10 +952,97 @@ public final class b extends Canvas implements Runnable, CommandListener {
         String[] var10000 = new String[]{"Quy Sư Phụ", "Lâm Sư Phụ"};
         lx = new String[][]{{"..."}, {"Đây là khu vực luyện tập, cứ yên tâm, nếu bị thương ta sẽ giúp đỡ.", "Đôi khi tập luyện với cái bù nhìn rơm đằng kia cũng mang lại nhiều bất ngờ đấy!"}, {"Thác nước này rất nguy hiểm, ta khuyên ngươi không nên xuống.", "Hãy quay lại đi, nếu có chuyện gì ta không cứu được ngươi đâu."}, {"Khu rừng trước mặt ngươi là nơi sống của bọn dơi quỷ, nhện độc và những sát thủ bị truy nã.", "Dù ngươi tài giỏi đến đâu cũng phải mất mạng khi đi ngang qua đó.", "Một số người có thể qua được bằng cách chạy thật nhanh qua.", "Nếu ngươi tự tin hãy dùng chiếc moto kia và liều một phen xem.", "Chúc ngươi may mắn."}};
         ly = new String[][]{{"Con lại tìm ta có chuyện gì?", "Thầy chủ nhiệm Con là Takanashi, mau đến gặp thầy để nhận bài tập."}, {"Chào cậu bé, ta là Kagome Ayumi, giảng viên cao cấp bộ môn Khí.", "Khí là môn đầu tiên bất kỳ học sinh nào cũng phải học khi bước vào đây.", "Bài học đâu tiên là kỹ năng khinh công. Sau khi học xong con sẽ phi thân cao hơn  gấp đôi bình thường.", "Bây giờ ta phải kiểm tra sơ bộ con. Hãy chạy thẳng về tay trái đến khu luyện tập.", "đến đó giết đủ 10 con ốc sên đá, sau đó quay lại đây!"}, {"Chào con, con đã sẵn sàng luyện tập rồi chứ?", "Hãy đến gặp cô Ayumi để học môn đầu tiên.", "Cô ấy đứng đằng kia, chúc con học tốt nhé!", "à, nếu cô ấy có hỏi gì về ta, hãy nói tốt về ta nhé, ta sẽ thưởng."}, {"Ta già cả rồi, tựa như chiếc lá khô..", "Lại đây, ta sẽ truyền hết võ công cho con...", "Toyotomi,...tình yêu của ta,....em ở nơi nào"}, {"Trình độ nhà ngươi còn quá thấp. Hãy quay lại đây khi đã học xong khinh công."}, {"Ngươi còn chưa dùng shuriken thì làm sao học phép thuật được."}, {"Ta sẽ dạy ngươi dùng shuriken nếu ngươi có đủ khả năng.", "Gần cổng trường có vài cái bù nhìn rơm, hãy đánh gãy 2 cái.", "Nhanh lên, hãy chứng tỏ sức mạnh của mình đi."}, {"Ngươi còn không mau đi đi!"}, {"Ngươi muốn học thuật ư?", "Không như những môn khác, thuật đòi hỏi ngươi phải luyện tập hàng ngày..", "Hơn thế nữa, ngươi phải học theo những quyển bí kíp.", "Ta sẽ dạy cho ngươi môn độn thổ, nếu ngươi có thể tìm được 1 quyển bí kíp từ bọn quỷ một chân", "Bọn chúng thường xuất hiện ở thác nước, bên kia khu luyện tập.", "Đi đi, hãy kiên nhẫn với từng tên , ngươi sẽ tìm thấy thôi!"}, {"Nhanh lên con, cô bé ấy đang đứng chờ ở đường hoa đào đấy!", "Nếu chậm, cô Ayumi sẽ buồn lắm đó!"}, {"Con có thể giúp ta một chuyện được không?", "Cô Ayumi có nhờ ta đón giúp cô em gái. Nhưng đúng vào lúc ta phải họp cùng thầy hiệu trưởng.", "Ta rất tin tưởng ở con, con hãy đến đầu đường hoa đào, đón cô ấy nhé!", "Nhanh lên, ta sẽ thưởng cho con nếu con làm tốt."}, {"Để trở thành 1 ninja giỏi ngươi phải có thể lực tốt.", "Ngươi có biết chữ Nin là Nhẫn không!", "Trong Nhẫn thì có Lực và Tâm..", "..để trở thành ninja thực thụ thì ngươi phải có Tâm và Lực", "....mà ta nói, ngươi có hiểu gì không.", "Hãy giết 20 con ong, rồi quay về gặp ta. Lúc đó ta sẽ giúp ngươi."}, {"Ngươi đã bao giờ vượt sông Watamoro chưa? Đó là một con sông rộng và hung dữ với thuỷ quái và sóng to.", "Ta sẽ giúp ngươi 1 cách vượt sông rất dễ dàng, nhưng ngươi phải làm một việc...", "Trong khu rừng trúc, có 1 con heo rừng thành tinh rất hung hăng..", "Hãy giết nó, mang về đây 1 quyển bí kíp nói về thuật lặn nước, ta sẽ hướng dẫn ngươi luyện.", "Đi đi, và hãy cẩn thận tính mạng nhà ngươi."}, {"Ngươi đã học được kỹ năng chạy nước rồi!", "Nếu ngươi có thể qua bên kia con sông,đến khu nghĩa địa, nhặt quyển bí kíp Ninja biến hình..", "..ta sẽ truyền thụ kỹ năng biến hình cho ngươi.", "Hãy nhớ ngươi phải đối đầu với một con quái vật to lớn bên kia sông đấy!", "Đi đi, chúc ngươi may mắn."}, {"Con biết, ta đang nghiên cứu làm ra 1 thứ thuốc, để chữa trị vết thương...", "Tuy nhiên ta thiếu 1 loại nguyên liệu rất khó kiếm.", "Nếu con có thể tìm giúp ta 15 cánh dơi vàng, ta sẽ có đền đáp xứng đáng.", "Bọn dơi vàng có mặt ở những ngôi đền phía nam. Bọn chúng rất nhanh.", "Tuy thế, ta vẫn tin con có thể mang về cho ta.", "Chúc con may mắn!"}, {"Cô Ayumi nói cho con nghe rồi à...", "Nói ra thật đáng buồn, cũng như bao trường khác, trường ta luôn có những học sinh cá biệt...", "Toniku là một trong số đó, nó đã bỏ trường thành lập băng nhóm...", "Hiện đang tụ tập quậy phá ở 3 ngôi miếu phía nam trường...", "Con là một học sinh tốt, hãy đi tìm bọn chúng bắt về cho ta.", "Làm đi, rồi báo cáo kết quả với ta nhé!"}, {"Cô bé em gái cô Ayumi cũng xinh, y như cô ấy vậy, con có thấy thế không!", "Nếu con có thể vào khu rừng gỗ, đánh gục 20 tên Quỷ khố, ta sẽ mai mối cho, haha!", "Nhưng hãy cẩn thận, bọn quái vật trong khu rừng ấy rất đông và mạnh đấy!"}, {"Hiện tại khả năng con đã rất khá rồi, ta quyết định dạy những kỹ năng cấp cao cho con.", "Đầu tiên là khinh công cấp 2.", "Tuy nhiên, con phải chứng tỏ đã thành thạo khinh công cấp 1 trước...", "Hãy nhảy lên không tung, đánh được 20 đòn trước khi chạm đất!", "Không dễ phải không..."}, {"Shuriken , một trong những vũ khí cơ bản của Ninja, ta sẽ truyền cho ngươi bộ ám khí mới này", "Vẫn như các lần trước, ngươi phải cho ta thấy đã đủ sức học...", "Đến khu rừng chông tre. Nhổ gốc 70 con quỷ hoa đỏ rồi về đây, ta sẽ dạy cho.", "Cẩn thận tính mạng ngươi đấy."}, {"Mấy hôm nay ta nhận thấy con chạy còn rất chậm..", "Một ninja chậm chạp như con không thể làm việc lớn được.", "Hãy đến vách đá Ito, mang về cho ta 50 đuôi bò cạp..", "Ta sẽ dùng độc của chúng, điều chế cho con 1 loại thuốc tăng lực...", "Cẩn thận nọc độc bọn chúng nhé! Hãy dẫn cô bé Sakura đi, nó sẽ giúp con nhiều đấy."}, {"Ta không muốn nói nhiều. Một phần thưởng đặt biệt cho ngươi..", "..nếu ngươi có thể giết được 30 con cá đỏ!"}, {"Đây là kỹ năng cuối cùng của một ninja... kỹ thuật ẩn thân", "Kỹ năng này muốn học cũng không khó, tại một thung lũng phía nam..", "có một quyển bí kíp được giấu từ ngàn năm nay.", "Hãy tìm về, ta sẽ giúp con có được kỹ năng lợi hại này."}, {"Con còn nhớ tên phản đồ Toniku lần trước không!", "Sau khi bị con đánh, hắn đã bỏ chạy đến ngôi miếu phía đông bắc.", "Nó vừa bắt mất cô bé Sakura đi rồi.", "Ta đã sai tất cả đệ tử đi tìm nó, cứu cô bé về!", "Con cũng phải thế nhé! Cô bé ấy đang chờ con đấy!"}};
-        lz = new String[][]{{"Thể lực con rất tốt, ta sẽ dạy khinh công cho con...", "Hãy tập trung khí huyết, hít thở nhẹ, người con nhẹ dần, nhẹ dần tựa chiếc lá khô...", "Chúc mừng con! Hãy thử nhảy lên xem kết quả thế nào.", "à, suýt nữa ta quên, lúc nãy thầy Hiroyaki trên tầng 1 gọi con đấy."}, {"Tốt. Đây là cách phóng shuriken, hãy nhớ kỹ:", "Bấm phím 0 để chuyển sang phóng shuriken, bấm lần nữa để đánh kiếm.", "Nếu chăm chỉ tập luyện, phi tiêu sẽ là vũ khí lợi hại nhất của ngươi.", "Thầy Honda có việc cần gặp ngươi. Nhanh lại đó đi!"}, {"Giỏi lắm, đúng là quyển bí kíp này.", "Cứ luyện tập theo quyển bí kíp này: hãy đến khu vực có đất..", "Ngồi thấp xuống và tập trung, ngươi sẽ độn thổ được.", "Hãy luyện tập đi, chú ý MP ngươi sẽ bị giảm khi độn thổ đó.", "Còn chuyện này nữa, vừa nãy ta thấy thầy chủ nhiệm ngươi có vẻ mệt. Ngươi hãy nhanh ghé thăm!"}, {"Ngươi giỏi lắm, ta sẽ đã thông kinh mạch cho...", "úm ba la !! soda cacao cola!", "Ngươi có cảm nhận được luồn chân khí trong người không", "Đi đi, hãy dùng sức mạnh này để bảo vệ dân làng!"}, {"Quyển bí kíp đây rồi, khá lắm cậu bé.", "Ngươi đã có thể lặn nước được rồi. Hãy nhớ, tuy lặn được nhưng thanh trúc dùng để thở rất ngắn...", "Vì thế, đừng lặn sâu quá đó.", "Thầy Hiroyaki tìm ngươi. Hãy mau đến gặp đi."}, {"Ngươi có thể vượt qua con sông ấy ư?", "Ta sẽ giúp ngươi gọi được sức mạnh của dòng tộc mình: Xích Mao", "Bất kỳ khi nào, hãy ấn phím số 7, ngươi sẽ có được sức mạnh từ gốc cội của dòng tộc mình", "hãy thử xem, nhưng ngươi cần cẩn thận, vì thi triển thuật này,ngươi sẽ chóng mệt lắm đấy."}, {"Cảm ơn con nhiều lắm. Đây là phần thưởng cho con, 5000$", "Tuy không bao nhiêu nhưng con có thể dùng nó để mua HP, MP.", "À, trường ta đang có việc lớn đấy!", "Con hãy gặp thầy chủ nhiệm để hỏi xem có giúp được gì hay không!"}, {"Hắn bỏ trốn thoát rồi ư?", "Ta thật đau lòng khi có một đứa học trò như nó!", "Kể từ nay, ta cho phép con tấn công nó, không nương tay, bất kỳ khi nào gặp!"}, {"Ta biết chắc chắn thế nào con cũng giết được bọn quỷ khố hung hăng đó!", "Lúc nãy, ta đã nói chuyện với cô Ayumi rồi.", "Hãy lại bắt chuyện với cô bé ấy đi!"}, {"Tốt lắm. Con đã chứng tỏ được mình.", "Đây là kỹ năng khinh công cấp 2. Con đã có thể nhảy cao hơn trước rồi.", "Tiếp theo, hãy gặp thầy Hiroyaki, ông ta sẽ dạy con những kỹ năng mới!"}, {"Tốt. Đây là kỹ năng shuriken cấp 2.", "Sức tấn công từ shuriken của con đã tăng lên rất nhiều!", "Con phải siêng năng tập luyện mới có thể giữ được sức mạnh này. Nhớ đấy!"}, {"Khá lắm. Đây là phương thuốc chạy nhanh cho con!", "Hãy chạy 1 đoạn ngắn, sau đó tốc độ của con sẽ tăng nhanh..", "Hãy thử xem nào!"}, {"Giỏi. Kể từ nay con sẽ không bao giờ bị chìm dưới nước nữa!", "..đây là kỹ thuật đứng nước bí truyền của ninja. Ta chỉ dạy cho mình con đấy!"}, {"Ngươi có thể tìm được nó ư?", "Tốt lắm, từ nay con có thể sử dụng nó rồi đấy.", "Hãy nhấn phím số 9 để có thể ẩn thân. Kỹ năng này rất lợi hại..", "tuy nhiên nó sẽ tiêu thụ rất nhiều MP của con đấy!"}, {"Các con đều bình an vô sự, rất tốt!", "Những gì đã là quá khứ thì ta cho qua, nhưng hãy nhớ và không tái phạm", "Nào, ta cho các con nghỉ, điện thoại cũng có lúc phải nghì ngơi chứ, hehe. Nay , ta chúc mừng các con đã hoàn thành khóa học ninja sơ cấp: các con không còn là Chunin nữa !", "Nay ta tuyên bố thăng cấp cho các con là Genin !"}};
-        String[][] var3 = new String[][]{{"Ta đang bận."}, {"Ngươi đã học được chiêu shuriken cuối cùng, ta ko còn gì dạy ngươi nữa. Đi đi."}};
-        lA = new String[][]{{"Nhanh lên, hãy sang khu luyện tập và giết 10 con ốc sên."}, {"Hãy đánh sập 2 bù nhìn rơm gần cổng trường. Nhanh lên!"}, {"Bọn quỷ một chân có mặt ở thác nước, bên kia khu luyện tập, mau giết chúng để tìm quyển bí kíp!"}, {"Hãy trở lại khi ngươi đã giết đủ 20 con ong."}, {"Con heo rừng rất nguy hiểm. Nhưng ta tin ngươi có thể giết được nó và cầm về cho ta quyển bí kíp. Đi đi!"}, {"Hãy đến khu nghĩa địa bên kia sông! Mang về quyển bí kíp. Nhanh lên!"}, {"Nhanh lên, hãy giết 15 con dơi vàng ở những ngôi miếu phía nam!"}, {"Hãy tìm tên Toniku, hắn trốn ở những ngôi miếu phía nam.", "Tìm gặp hắn quay lại báo cáo với ta nhé!"}, {"Hãy giết 20 con quỷ khố ở khu rừng gỗ!", "Xong việc ta sẽ giúp con cưa con bé em gái cô giáo Ayumi!"}, {"Để ta dạy kinh công cấp 2 cho con, con phải chứng tỏ được khả năng hiện tại.", "Hãy nhảy lên cao và chém được ít nhất 20 phát khi chưa chạm đất!", "Khá khó, nhưng ta tin con sẽ khẳng định được mình!"}, {"Hãy đến rừng chông tre. Giết 70 quỷ hoa đỏ rồi về đây, ta cho ngươi shuriken cấp 2!"}, {"Con hãy đến vách đá Ito, giết 50 con bò cạp, mang đuôi về cho ta!"}, {"Ta không muốn nói nhiều. Một phần thưởng đặt biệt cho ngươi..", "..nếu ngươi có thể giết được 30 con cá đỏ!"}, {"Để học kỹ năng ẩn thân, hãy đi tìm 1 quyển bí kíp...", "Cất giấu tại 1 thung lũng phía đông."}, {"Nhanh lên, cô bé ấy đã bị bắt từ mấy hôm rồi!"}};
-        lB = new String[][]{{"Ta đang bận, Con hãy đi tập luyện đi."}, {"Các ngươi phải cố gắng tập luyện để trở thành những Ninja tốt"}, {"Hằng ngày ngươi phải siêng năng tập thể lực, đó là nền tảng cho mọi hoạt động."}, {"Cô Ayumi xinh thật. Con có thấy thế không?"}, {"Ngươi biết không....à..à...mà ta định nói gì với ngươi nhỉ."}, {"Ta không còn gì để dạy con nữa...", "Nhưng con phải cố gắng tập luyện hàng ngày. Biết không!"}, {"Con cần phải để mắt tới cô bé Sakura nhé..", "Con bé ấy quậy lắm đấy!"}, {"Dù sau này có đi đâu, ngươi cũng phải trở thành 1 ninja tốt nhé!"}, {"Ta không còn gì để dạy con nữa!", "Hãy rèn luyện sức khỏe hàng ngày, biết không!"}, {"..à.. ừ.. ngươi muốn học phép à..", ".. để ta nghĩ ra thêm vài phép mới..", "..trước mắt hãy học những kỹ năng cũ đã nhé..."}};
+        lz = new String[][]{{"Thể lực con rất tốt, ta sẽ dạy khinh công cho con...", 
+                "Hãy tập trung khí huyết, hít thở nhẹ, người con nhẹ dần, nhẹ dần tựa chiếc lá khô...", 
+                "Chúc mừng con! Hãy thử nhảy lên xem kết quả thế nào.", 
+                "à, suýt nữa ta quên, lúc nãy thầy Hiroyaki trên tầng 1 gọi con đấy."}, 
+            {"Tốt. Đây là cách phóng shuriken, hãy nhớ kỹ:", 
+                "Bấm phím 0 để chuyển sang phóng shuriken, bấm lần nữa để đánh kiếm.", 
+                "Nếu chăm chỉ tập luyện, phi tiêu sẽ là vũ khí lợi hại nhất của ngươi.", 
+                "Thầy Honda có việc cần gặp ngươi. Nhanh lại đó đi!"}, 
+            {"Giỏi lắm, đúng là quyển bí kíp này.", 
+                "Cứ luyện tập theo quyển bí kíp này: hãy đến khu vực có đất..", 
+                "Ngồi thấp xuống và tập trung, ngươi sẽ độn thổ được.", 
+                "Hãy luyện tập đi, chú ý MP ngươi sẽ bị giảm khi độn thổ đó.", 
+                "Còn chuyện này nữa, vừa nãy ta thấy thầy chủ nhiệm ngươi có vẻ mệt. Ngươi hãy nhanh ghé thăm!"}, 
+            {"Ngươi giỏi lắm, ta sẽ đã thông kinh mạch cho...", 
+                "úm ba la !! soda cacao cola!", "Ngươi có cảm nhận được luồn chân khí trong người không", 
+                "Đi đi, hãy dùng sức mạnh này để bảo vệ dân làng!"}, 
+            {"Quyển bí kíp đây rồi, khá lắm cậu bé.", 
+                "Ngươi đã có thể lặn nước được rồi. Hãy nhớ, tuy lặn được nhưng thanh trúc dùng để thở rất ngắn...", 
+                "Vì thế, đừng lặn sâu quá đó.", 
+                "Thầy Hiroyaki tìm ngươi. Hãy mau đến gặp đi."}, 
+            {"Ngươi có thể vượt qua con sông ấy ư?", 
+                "Ta sẽ giúp ngươi gọi được sức mạnh của dòng tộc mình: Xích Mao", 
+                "Bất kỳ khi nào, hãy ấn phím số 7, ngươi sẽ có được sức mạnh từ gốc cội của dòng tộc mình", 
+                "hãy thử xem, nhưng ngươi cần cẩn thận, vì thi triển thuật này,ngươi sẽ chóng mệt lắm đấy."}, 
+            {"Cảm ơn con nhiều lắm. Đây là phần thưởng cho con, 5000$", 
+                "Tuy không bao nhiêu nhưng con có thể dùng nó để mua HP, MP.", 
+                "À, trường ta đang có việc lớn đấy!", 
+                "Con hãy gặp thầy chủ nhiệm để hỏi xem có giúp được gì hay không!"}, 
+            {"Hắn bỏ trốn thoát rồi ư?", 
+                "Ta thật đau lòng khi có một đứa học trò như nó!", 
+                "Kể từ nay, ta cho phép con tấn công nó, không nương tay, bất kỳ khi nào gặp!"}, 
+            {"Ta biết chắc chắn thế nào con cũng giết được bọn quỷ khố hung hăng đó!", 
+                "Lúc nãy, ta đã nói chuyện với cô Ayumi rồi.", 
+                "Hãy lại bắt chuyện với cô bé ấy đi!"}, 
+            {"Tốt lắm. Con đã chứng tỏ được mình.", 
+                "Đây là kỹ năng khinh công cấp 2. Con đã có thể nhảy cao hơn trước rồi.", 
+                "Tiếp theo, hãy gặp thầy Hiroyaki, ông ta sẽ dạy con những kỹ năng mới!"}, 
+            {"Tốt. Đây là kỹ năng shuriken cấp 2.", 
+                "Sức tấn công từ shuriken của con đã tăng lên rất nhiều!", 
+                "Con phải siêng năng tập luyện mới có thể giữ được sức mạnh này. Nhớ đấy!"}, 
+            {"Khá lắm. Đây là phương thuốc chạy nhanh cho con!", 
+                "Hãy chạy 1 đoạn ngắn, sau đó tốc độ của con sẽ tăng nhanh..", 
+                "Hãy thử xem nào!"}, 
+            {"Giỏi. Kể từ nay con sẽ không bao giờ bị chìm dưới nước nữa!", 
+                "..đây là kỹ thuật đứng nước bí truyền của ninja. Ta chỉ dạy cho mình con đấy!"}, 
+            {"Ngươi có thể tìm được nó ư?", 
+                "Tốt lắm, từ nay con có thể sử dụng nó rồi đấy.", 
+                "Hãy nhấn phím số 9 để có thể ẩn thân. Kỹ năng này rất lợi hại..", 
+                "tuy nhiên nó sẽ tiêu thụ rất nhiều MP của con đấy!"}, 
+            {"Các con đều bình an vô sự, rất tốt!", 
+                "Những gì đã là quá khứ thì ta cho qua, nhưng hãy nhớ và không tái phạm", 
+                "Nào, ta cho các con nghỉ, điện thoại cũng có lúc phải nghì ngơi chứ, hehe. Nay , ta chúc mừng các con đã hoàn thành khóa học ninja sơ cấp: các con không còn là Chunin nữa !", 
+                "Nay ta tuyên bố thăng cấp cho các con là Genin !"}};
+        String[][] var3 = new String[][]{{"Ta đang bận."}, 
+            {"Ngươi đã học được chiêu shuriken cuối cùng, ta ko còn gì dạy ngươi nữa. Đi đi."}};
+        lA = new String[][]{{"Nhanh lên, hãy sang khu luyện tập và giết 10 con ốc sên."}, 
+            {"Hãy đánh sập 2 bù nhìn rơm gần cổng trường. Nhanh lên!"}, 
+            {"Bọn quỷ một chân có mặt ở thác nước, bên kia khu luyện tập, mau giết chúng để tìm quyển bí kíp!"}, 
+            {"Hãy trở lại khi ngươi đã giết đủ 20 con ong."}, 
+            {"Con heo rừng rất nguy hiểm. Nhưng ta tin ngươi có thể giết được nó và cầm về cho ta quyển bí kíp. Đi đi!"}, 
+            {"Hãy đến khu nghĩa địa bên kia sông! Mang về quyển bí kíp. Nhanh lên!"}, 
+            {"Nhanh lên, hãy giết 15 con dơi vàng ở những ngôi miếu phía nam!"}, 
+            {"Hãy tìm tên Toniku, hắn trốn ở những ngôi miếu phía nam.", 
+                "Tìm gặp hắn quay lại báo cáo với ta nhé!"}, 
+            {"Hãy giết 20 con quỷ khố ở khu rừng gỗ!", 
+                "Xong việc ta sẽ giúp con cưa con bé em gái cô giáo Ayumi!"}, 
+            {"Để ta dạy kinh công cấp 2 cho con, con phải chứng tỏ được khả năng hiện tại.", 
+                "Hãy nhảy lên cao và chém được ít nhất 20 phát khi chưa chạm đất!", 
+                "Khá khó, nhưng ta tin con sẽ khẳng định được mình!"}, 
+            {"Hãy đến rừng chông tre. Giết 70 quỷ hoa đỏ rồi về đây, ta cho ngươi shuriken cấp 2!"}, 
+            {"Con hãy đến vách đá Ito, giết 50 con bò cạp, mang đuôi về cho ta!"}, 
+            {"Ta không muốn nói nhiều. Một phần thưởng đặt biệt cho ngươi..", 
+                "..nếu ngươi có thể giết được 30 con cá đỏ!"}, 
+            {"Để học kỹ năng ẩn thân, hãy đi tìm 1 quyển bí kíp...", 
+                "Cất giấu tại 1 thung lũng phía đông."}, 
+            {"Nhanh lên, cô bé ấy đã bị bắt từ mấy hôm rồi!"}};
+        lB = new String[][]{{"Ta đang bận, Con hãy đi tập luyện đi."}, 
+            {"Các ngươi phải cố gắng tập luyện để trở thành những Ninja tốt"}, 
+            {"Hằng ngày ngươi phải siêng năng tập thể lực, đó là nền tảng cho mọi hoạt động."}, 
+            {"Cô Ayumi xinh thật. Con có thấy thế không?"}, 
+            {"Ngươi biết không....à..à...mà ta định nói gì với ngươi nhỉ."}, 
+            {"Ta không còn gì để dạy con nữa...", 
+                "Nhưng con phải cố gắng tập luyện hàng ngày. Biết không!"}, 
+            {"Con cần phải để mắt tới cô bé Sakura nhé..", 
+                "Con bé ấy quậy lắm đấy!"}, 
+            {"Dù sau này có đi đâu, ngươi cũng phải trở thành 1 ninja tốt nhé!"}, 
+            {"Ta không còn gì để dạy con nữa!", 
+                "Hãy rèn luyện sức khỏe hàng ngày, biết không!"}, 
+            {"..à.. ừ.. ngươi muốn học phép à..", 
+                ".. để ta nghĩ ra thêm vài phép mới..", 
+                "..trước mắt hãy học những kỹ năng cũ đã nhé..."}};
         var10000 = new String[]{"Ngươi không có đủ vàng."};
         lC = new String[]{"Hãy hoàn thành nhiệm vụ được giao rồi quay lại gặp ta!"};
         lD = new int[]{1, 7, 100, 100, 6, 100, 100, 13, 100, 15, 100, 100, 18, 17, 10, 100, 100, 100};
@@ -949,7 +1193,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         var1[var2++] = fR;
         var1[var2++] = ie ? 1 : 0;
         var1[var2++] = id;
-        var1[var2++] = if;
+        var1[var2++] = ifSt;
         var1[var2++] = gb;
         var1[var2++] = gc;
         var1[var2++] = gd;
@@ -1198,7 +1442,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         fR = var0[var2++];
         ie = var0[var2++] == 1;
         id = var0[var2++];
-        if = var0[var2++];
+        ifSt = var0[var2++];
         gb = var0[var2++];
         gc = var0[var2++];
         gd = var0[var2++];
@@ -2730,7 +2974,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             }
 
             dn = true;
-            do = 348;
+            doSt = 348;
             dp = 408;
             dq = 1;
             dr = 252;
@@ -2901,19 +3145,24 @@ public final class b extends Canvas implements Runnable, CommandListener {
             J();
             a(0, 5, 35, 9, 40, 33, 36, new String[]{"Bạn có thể nhảy lên cây cầu này nếu đã học xong khinh công từ cô Ayumi xinh đẹp."});
             if (eQ) {
-                a(1, 6, 25, 10, 40, 22, 28, new String[]{"Ta đây là một ninja sát thủ!", "Ha ha ha!"});
+                a(1, 6, 25, 10, 40, 22, 28, new String[]{"Ta đây là một ninja sát thủ!", 
+                    "Ha ha ha!"});
             } else {
-                a(1, 2, 25, 10, 40, 22, 28, new String[]{"Mày đã học khinh công rồi hả?", "À, mày có thấy con chó của tao chạy đâu đâu không?"});
+                a(1, 2, 25, 10, 40, 22, 28, new String[]{"Mày đã học khinh công rồi hả?", 
+                    "À, mày có thấy con chó của tao chạy đâu đâu không?"});
             }
 
-            a(2, 1, 6, 9, 40, 2, 10, new String[]{"Bên kia là một thác nước rất lớn đấy.", "Nó không thuộc phạm vi trường chúng ta nữa nên có rất nhiều quái vật hung dữ.", "Nghe nói có một con quái vật rất to đấy, tốt hơn ngươi đừng qua làm gì!"});
+            a(2, 1, 6, 9, 40, 2, 10, new String[]{"Bên kia là một thác nước rất lớn đấy.", 
+                "Nó không thuộc phạm vi trường chúng ta nữa nên có rất nhiều quái vật hung dữ.", 
+                "Nghe nói có một con quái vật rất to đấy, tốt hơn ngươi đừng qua làm gì!"});
             y(7);
         }
 
         if (var0 == 2) {
             du = 7;
             J();
-            a(0, 3, 16, 12, 60, 14, 21, new String[]{"Cậu nhìn thấy chiếc xe máy kia không?", "Phải có bằng lái từ thầy chủ nhiệm bạn mới có thể chạy được."});
+            a(0, 3, 16, 12, 60, 14, 21, new String[]{"Cậu nhìn thấy chiếc xe máy kia không?", 
+                "Phải có bằng lái từ thầy chủ nhiệm bạn mới có thể chạy được."});
             a(1, 4, 8, 12, 50, 2, 15, new String[]{"Thằng nhà quê kia, mày đi đâu đấy?"});
             if (eQ) {
                 a(2, 6, 29, 13, 200, 27, 40, new String[]{"Ninja sát thủ là ta - Thiên hạ vô địch!"});
@@ -2922,9 +3171,12 @@ public final class b extends Canvas implements Runnable, CommandListener {
             }
 
             a(3, 5, 46, 13, 200, 41, 49, new String[]{"Nếu bạn muốn lên kia thì phải học khinh công từ cô Ayumi đã."});
-            a(4, 1, 46, 11, 200, 43, 53, new String[]{"Cậu có thấy ở đây ai cũng tài giỏi không?", "Hãy cố gắng tập luyện hơn nữa nhé"});
-            a(5, 0, 54, 11, 200, 50, 58, new String[]{"Ra ngoài rừng hoa đào có rất nhiều điều thú vị đấy.", "Bạn nên ra thử một lần để biết."});
-            a(6, 6, 34, 13, 200, 28, 48, new String[]{"Đừng hỏi ta là ai...", "Ta chỉ là một ninja sát thủ thôi, ngươi biết thế là được rồi.", "Biến đi cho ta luyện tập."});
+            a(4, 1, 46, 11, 200, 43, 53, new String[]{"Cậu có thấy ở đây ai cũng tài giỏi không?", 
+                "Hãy cố gắng tập luyện hơn nữa nhé"});
+            a(5, 0, 54, 11, 200, 50, 58, new String[]{"Ra ngoài rừng hoa đào có rất nhiều điều thú vị đấy.", 
+                "Bạn nên ra thử một lần để biết."});
+            a(6, 6, 34, 13, 200, 28, 48, new String[]{"Đừng hỏi ta là ai...", 
+                "Ta chỉ là một ninja sát thủ thôi, ngươi biết thế là được rồi.", "Biến đi cho ta luyện tập."});
             y(7);
         }
 
@@ -4073,7 +4325,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
     }
 
     private static void D(int var0) {
-        if = 0;
+        ifSt = 0;
         id = var0;
         ie = true;
     }
@@ -6408,59 +6660,59 @@ public final class b extends Canvas implements Runnable, CommandListener {
 
     private static void ad() {
         if (ie) {
-            switch (au[id][if]) {
+            switch (au[id][ifSt]) {
                 case 1:
-                    if (fe > aw[id][if]) {
-                        C(av[id][if]);
-                        ++if;
-                        return;
-                    }
-                    break;
+                    if (fe > aw[id][ifSt]) {
+                    C(av[id][ifSt]);
+                    ++ifSt;
+                    return;
+                }
+                break;
                 case 2:
-                    C(av[id][if]);
-                    ++if;
+                    C(av[id][ifSt]);
+                    ++ifSt;
                     return;
                 case 3:
                 default:
                     return;
                 case 4:
                     if (fe > fO + r) {
-                        C(av[id][if]);
-                        ++if;
+                        C(av[id][ifSt]);
+                        ++ifSt;
                         return;
                     }
                     break;
                 case 6:
-                    if (fe < aw[id][if] && fe > aw[id][if] - 96 && ff == ax[id][if]) {
-                        C(av[id][if]);
-                        ++if;
-                    }
+                    if (fe < aw[id][ifSt] && fe > aw[id][ifSt] - 96 && ff == ax[id][ifSt]) {
+                    C(av[id][ifSt]);
+                    ++ifSt;
+                }
                 case 5:
                     if (gS == 22) {
-                        C(av[id][if]);
-                        ++if;
+                        C(av[id][ifSt]);
+                        ++ifSt;
                         return;
                     }
                     break;
                 case 7:
                     if (hX == 5) {
-                        C(av[id][if]);
-                        ++if;
+                        C(av[id][ifSt]);
+                        ++ifSt;
                         return;
                     }
                     break;
                 case 8:
                     if (hg < 10) {
-                        C(av[id][if]);
-                        ++if;
+                        C(av[id][ifSt]);
+                        ++ifSt;
                         return;
                     }
                     break;
                 case 9:
                     if (hr == 22) {
-                        C(av[id][if]);
+                        C(av[id][ifSt]);
                         eH = true;
-                        ++if;
+                        ++ifSt;
                         return;
                     }
             }
@@ -6578,11 +6830,6 @@ public final class b extends Canvas implements Runnable, CommandListener {
                 var4 = (var5 = e("girl")) == null ? null : new String(var5);
                 var1 = null;
 
-                try {
-                    var1 = LocalDevice.getLocalDevice().getBluetoothAddress();
-                } catch (Exception var3) {
-                }
-
                 if (var1 == null) {
                     b = !b;
                 } else if (var4 == null) {
@@ -6651,7 +6898,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
                 var3.setCommandListener(this);
                 Display.getDisplay(Midlet.c).setCurrent(var3);
             } else if (bv.equals("99999")) {
-                a(aG(), "sms://8122", 0);
+                a(aG(), "sms://", 0);
                 e = 13;
             } else {
                 int var2;
@@ -7045,171 +7292,171 @@ public final class b extends Canvas implements Runnable, CommandListener {
                     }
 
                     g(var6);
-                    if (dn && do + 15 >= fO && do - 15 <= fO + r && dp >= fP && dp - 10 <= fP + s) {
-                        var2 = x % 8 > 3 ? 0 : 1;
-                        if (dq > 0) {
-                            var6.drawImage(ei[var2], do, dp, 33);
-                        } else {
-                            var6.drawRegion(ei[var2], 0, 0, ei[var2].getWidth(), ei[var2].getHeight(), 2, do, dp, 33);
-                        }
+                    if (dn && doSt + 15 >= fO && doSt - 15 <= fO + r && dp >= fP && dp - 10 <= fP + s) {
+                    var2 = x % 8 > 3 ? 0 : 1;
+                    if (dq > 0) {
+                        var6.drawImage(ei[var2], doSt, dp, 33);
+                    } else {
+                        var6.drawRegion(ei[var2], 0, 0, ei[var2].getWidth(), ei[var2].getHeight(), 2, doSt, dp, 33);
                     }
+                }
 
-                    if (hc) {
-                        if (hd) {
-                            var6.setColor(16768477);
-                            var2 = fO + 50;
-                            var3 = fP + 15;
-                            if (!be) {
-                                var3 += 20;
-                            }
-
-                            var6.drawRect(var2 - 35 - 1, var3 - 7, 72, 4);
-                            int var7 = hg * 70 / hh;
-                            var6.setColor(15597568);
-                            var6.fillRect(var2 - 35, var3 - 6, var7, 3);
-                            var6.setColor(4456482);
-                            var6.fillRect(var2 - 35 + var7, var3 - 6, 70 - var7 + 1, 3);
+                if (hc) {
+                    if (hd) {
+                        var6.setColor(16768477);
+                        var2 = fO + 50;
+                        var3 = fP + 15;
+                        if (!be) {
+                            var3 += 20;
                         }
 
-                        if (dz[0] + fi >= fO && dz[0] - fi <= fO + r && dA[0] >= fP && dA[0] - fh <= fP + s) {
-                            if (dJ[0] == 1) {
-                                var6.drawImage(es[dH[0]][aI[dG[0]][0][0]], dz[0] + aI[dG[0]][0][1], dA[0] - aI[dG[0]][0][2], 0);
-                                var6.drawImage(eq[aI[dG[0]][1][0]], dz[0] + aI[dG[0]][1][1], dA[0] - aI[dG[0]][1][2], 0);
-                                var6.drawImage(ed[aI[dG[0]][2][0]], dz[0] + aI[dG[0]][2][1], dA[0] - aI[dG[0]][2][2], 0);
-                                if (dI[0] != -1) {
-                                    var6.drawImage(eB[dI[0]], dz[0] - as[dI[0]], dA[0] - at[dI[0]], 0);
-                                }
-                            } else {
-                                var6.drawRegion(es[dH[0]][aI[dG[0]][0][0]], 0, 0, es[dH[0]][aI[dG[0]][0][0]].getWidth(), es[dH[0]][aI[dG[0]][0][0]].getHeight(), 2, dz[0] - aI[dG[0]][0][1], dA[0] - aI[dG[0]][0][2], 24);
-                                var6.drawRegion(eq[aI[dG[0]][1][0]], 0, 0, eq[aI[dG[0]][1][0]].getWidth(), eq[aI[dG[0]][1][0]].getHeight(), 2, dz[0] - aI[dG[0]][1][1], dA[0] - aI[dG[0]][1][2], 24);
-                                var6.drawRegion(ed[aI[dG[0]][2][0]], 0, 0, ed[aI[dG[0]][2][0]].getWidth(), ed[aI[dG[0]][2][0]].getHeight(), 2, dz[0] - aI[dG[0]][2][1], dA[0] - aI[dG[0]][2][2], 24);
-                                if (dI[0] != -1) {
-                                    var6.drawRegion(eB[dI[0]], 0, 0, eB[dI[0]].getWidth(), eB[dI[0]].getHeight(), 2, dz[0] + as[dI[0]], dA[0] - at[dI[0]], 24);
-                                }
-                            }
-                        }
+                        var6.drawRect(var2 - 35 - 1, var3 - 7, 72, 4);
+                        int var7 = hg * 70 / hh;
+                        var6.setColor(15597568);
+                        var6.fillRect(var2 - 35, var3 - 6, var7, 3);
+                        var6.setColor(4456482);
+                        var6.fillRect(var2 - 35 + var7, var3 - 6, 70 - var7 + 1, 3);
                     }
 
-                    if (dX != 0 && (var2 = dX % 3) < 2) {
-                        var6.drawImage(er[var2], dV, dW, 17);
-                    }
-
-                    if (gm == w) {
-                        if (gz == 1) {
-                            var6.drawImage(em[aq[gs][0][0]], gn + aq[gs][0][1], go - aq[gs][0][2], 0);
-                            var6.drawImage(en[aq[gs][1][0]], gn + aq[gs][1][1], go - aq[gs][1][2], 0);
-                            var6.drawImage(el[aq[gs][2][0]], gn + aq[gs][2][1], go - aq[gs][2][2], 0);
-                            if (ig != -1) {
-                                var6.drawImage(eB[ig], gn - as[ig], go - at[ig], 0);
+                    if (dz[0] + fi >= fO && dz[0] - fi <= fO + r && dA[0] >= fP && dA[0] - fh <= fP + s) {
+                        if (dJ[0] == 1) {
+                            var6.drawImage(es[dH[0]][aI[dG[0]][0][0]], dz[0] + aI[dG[0]][0][1], dA[0] - aI[dG[0]][0][2], 0);
+                            var6.drawImage(eq[aI[dG[0]][1][0]], dz[0] + aI[dG[0]][1][1], dA[0] - aI[dG[0]][1][2], 0);
+                            var6.drawImage(ed[aI[dG[0]][2][0]], dz[0] + aI[dG[0]][2][1], dA[0] - aI[dG[0]][2][2], 0);
+                            if (dI[0] != -1) {
+                                var6.drawImage(eB[dI[0]], dz[0] - as[dI[0]], dA[0] - at[dI[0]], 0);
                             }
                         } else {
-                            var6.drawRegion(em[aq[gs][0][0]], 0, 0, em[aq[gs][0][0]].getWidth(), em[aq[gs][0][0]].getHeight(), 2, gn - aq[gs][0][1], go - aq[gs][0][2], 24);
-                            var6.drawRegion(en[aq[gs][1][0]], 0, 0, en[aq[gs][1][0]].getWidth(), en[aq[gs][1][0]].getHeight(), 2, gn - aq[gs][1][1], go - aq[gs][1][2], 24);
-                            var6.drawRegion(el[aq[gs][2][0]], 0, 0, el[aq[gs][2][0]].getWidth(), el[aq[gs][2][0]].getHeight(), 2, gn - aq[gs][2][1], go - aq[gs][2][2], 24);
-                            if (ig != -1) {
-                                var6.drawRegion(eB[ig], 0, 0, eB[ig].getWidth(), eB[ig].getHeight(), 2, gn + as[ig], go - at[ig], 24);
+                            var6.drawRegion(es[dH[0]][aI[dG[0]][0][0]], 0, 0, es[dH[0]][aI[dG[0]][0][0]].getWidth(), es[dH[0]][aI[dG[0]][0][0]].getHeight(), 2, dz[0] - aI[dG[0]][0][1], dA[0] - aI[dG[0]][0][2], 24);
+                            var6.drawRegion(eq[aI[dG[0]][1][0]], 0, 0, eq[aI[dG[0]][1][0]].getWidth(), eq[aI[dG[0]][1][0]].getHeight(), 2, dz[0] - aI[dG[0]][1][1], dA[0] - aI[dG[0]][1][2], 24);
+                            var6.drawRegion(ed[aI[dG[0]][2][0]], 0, 0, ed[aI[dG[0]][2][0]].getWidth(), ed[aI[dG[0]][2][0]].getHeight(), 2, dz[0] - aI[dG[0]][2][1], dA[0] - aI[dG[0]][2][2], 24);
+                            if (dI[0] != -1) {
+                                var6.drawRegion(eB[dI[0]], 0, 0, eB[dI[0]].getWidth(), eB[dI[0]].getHeight(), 2, dz[0] + as[dI[0]], dA[0] - at[dI[0]], 24);
                             }
                         }
                     }
+                }
 
-                    b(var6);
-                    if (fH != 0) {
-                        var6.drawImage(ec, fF, fG, 33);
+                if (dX != 0 && (var2 = dX % 3) < 2) {
+                    var6.drawImage(er[var2], dV, dW, 17);
+                }
+
+                if (gm == w) {
+                    if (gz == 1) {
+                        var6.drawImage(em[aq[gs][0][0]], gn + aq[gs][0][1], go - aq[gs][0][2], 0);
+                        var6.drawImage(en[aq[gs][1][0]], gn + aq[gs][1][1], go - aq[gs][1][2], 0);
+                        var6.drawImage(el[aq[gs][2][0]], gn + aq[gs][2][1], go - aq[gs][2][2], 0);
+                        if (ig != -1) {
+                            var6.drawImage(eB[ig], gn - as[ig], go - at[ig], 0);
+                        }
+                    } else {
+                        var6.drawRegion(em[aq[gs][0][0]], 0, 0, em[aq[gs][0][0]].getWidth(), em[aq[gs][0][0]].getHeight(), 2, gn - aq[gs][0][1], go - aq[gs][0][2], 24);
+                        var6.drawRegion(en[aq[gs][1][0]], 0, 0, en[aq[gs][1][0]].getWidth(), en[aq[gs][1][0]].getHeight(), 2, gn - aq[gs][1][1], go - aq[gs][1][2], 24);
+                        var6.drawRegion(el[aq[gs][2][0]], 0, 0, el[aq[gs][2][0]].getWidth(), el[aq[gs][2][0]].getHeight(), 2, gn - aq[gs][2][1], go - aq[gs][2][2], 24);
+                        if (ig != -1) {
+                            var6.drawRegion(eB[ig], 0, 0, eB[ig].getWidth(), eB[ig].getHeight(), 2, gn + as[ig], go - at[ig], 24);
+                        }
                     }
+                }
 
-                    var1 = var6;
+                b(var6);
+                if (fH != 0) {
+                    var6.drawImage(ec, fF, fG, 33);
+                }
 
+                var1 = var6;
+
+                for(var2 = 0; var2 < 2; ++var2) {
+                    if (cc[var2] != -1) {
+                        if (ce[var2] == 1) {
+                            var1.drawImage(ey[cd[var2]], ca[var2], cb[var2], 3);
+                        } else {
+                            var1.drawRegion(ey[cd[var2]], 0, 0, ey[cd[var2]].getWidth(), ey[cd[var2]].getHeight(), 2, ca[var2], cb[var2], 3);
+                        }
+                    }
+                }
+
+                var1 = var6;
+                if (!a) {
                     for(var2 = 0; var2 < 2; ++var2) {
-                        if (cc[var2] != -1) {
-                            if (ce[var2] == 1) {
-                                var1.drawImage(ey[cd[var2]], ca[var2], cb[var2], 3);
-                            } else {
-                                var1.drawRegion(ey[cd[var2]], 0, 0, ey[cd[var2]].getWidth(), ey[cd[var2]].getHeight(), 2, ca[var2], cb[var2], 3);
-                            }
+                        if (cl[var2] != -1) {
+                            var1.drawImage(ej[var2][cl[var2]], cj[var2], ck[var2], 3);
                         }
                     }
+                }
 
-                    var1 = var6;
-                    if (!a) {
-                        for(var2 = 0; var2 < 2; ++var2) {
-                            if (cl[var2] != -1) {
-                                var1.drawImage(ej[var2][cl[var2]], cj[var2], ck[var2], 3);
-                            }
+                var1 = var6;
+
+                for(var2 = 0; var2 < bM; ++var2) {
+                    if (bP[var2] != -1) {
+                        var1.drawImage(dY[bS[var2]][bQ[var2] > 0 ? 0 : 1], bN[var2], bO[var2], 3);
+                    }
+                }
+
+                var1 = var6;
+
+                for(var2 = 0; var2 < cV; ++var2) {
+                    if (cY[var2] != -1) {
+                        var1.drawImage(ek[cZ[var2]], cW[var2], cX[var2], 3);
+                    }
+                }
+
+                var1 = var6;
+
+                for(var2 = 0; var2 < bT; ++var2) {
+                    if (bW[var2] != 0) {
+                        var1.drawImage(ea, bU[var2], bV[var2], 3);
+                    }
+                }
+
+                var1 = var6;
+                if (!a) {
+                    for(var2 = 0; var2 < 2; ++var2) {
+                        if (ch[var2] != -1) {
+                            var1.drawImage(eD[ci[var2]], cf[var2], cg[var2], 3);
                         }
                     }
+                }
 
-                    var1 = var6;
+                l(var6);
+                var1 = var6;
 
-                    for(var2 = 0; var2 < bM; ++var2) {
-                        if (bP[var2] != -1) {
-                            var1.drawImage(dY[bS[var2]][bQ[var2] > 0 ? 0 : 1], bN[var2], bO[var2], 3);
-                        }
+                for(var2 = 0; var2 < 5; ++var2) {
+                    if (dT[var2] != -1) {
+                        Midlet.a(var1, dO[var2], dU[var2], dP[var2], dQ[var2], 0);
                     }
+                }
 
-                    var1 = var6;
+                if (gb == w) {
+                    var6.drawImage(dZ[ge], gf, gg, 3);
+                }
 
-                    for(var2 = 0; var2 < cV; ++var2) {
-                        if (cY[var2] != -1) {
-                            var1.drawImage(ek[cZ[var2]], cW[var2], cX[var2], 3);
-                        }
+                c(var6);
+                if (d) {
+                    d(var6);
+                }
+
+                if (bu > 1) {
+                    e(var6);
+                }
+
+                if (cm) {
+                    var6.translate(-var6.getTranslateX(), -var6.getTranslateY());
+                    var6.setClip(-1, -1, aT + 2, aU + 2);
+                    var6.setColor(0);
+                    var6.fillRect(0, 0, aT, 21);
+                    var6.setColor(10275899);
+                    var6.fillRect(0, 19, aT, 1);
+                    if (x % 10 > 2) {
+                        Midlet.a(var6, co, bC, 4, 2);
                     }
+                }
 
-                    var1 = var6;
+                if (iz) {
+                    f(var6);
+                }
 
-                    for(var2 = 0; var2 < bT; ++var2) {
-                        if (bW[var2] != 0) {
-                            var1.drawImage(ea, bU[var2], bV[var2], 3);
-                        }
-                    }
-
-                    var1 = var6;
-                    if (!a) {
-                        for(var2 = 0; var2 < 2; ++var2) {
-                            if (ch[var2] != -1) {
-                                var1.drawImage(eD[ci[var2]], cf[var2], cg[var2], 3);
-                            }
-                        }
-                    }
-
-                    l(var6);
-                    var1 = var6;
-
-                    for(var2 = 0; var2 < 5; ++var2) {
-                        if (dT[var2] != -1) {
-                            Midlet.a(var1, dO[var2], dU[var2], dP[var2], dQ[var2], 0);
-                        }
-                    }
-
-                    if (gb == w) {
-                        var6.drawImage(dZ[ge], gf, gg, 3);
-                    }
-
-                    c(var6);
-                    if (d) {
-                        d(var6);
-                    }
-
-                    if (bu > 1) {
-                        e(var6);
-                    }
-
-                    if (cm) {
-                        var6.translate(-var6.getTranslateX(), -var6.getTranslateY());
-                        var6.setClip(-1, -1, aT + 2, aU + 2);
-                        var6.setColor(0);
-                        var6.fillRect(0, 0, aT, 21);
-                        var6.setColor(10275899);
-                        var6.fillRect(0, 19, aT, 1);
-                        if (x % 10 > 2) {
-                            Midlet.a(var6, co, bC, 4, 2);
-                        }
-                    }
-
-                    if (iz) {
-                        f(var6);
-                    }
-
-                    return;
+                return;
                 case 2:
                     var1.setColor(0);
                     var1.fillRect(0, 0, aT, 21);
@@ -8961,292 +9208,328 @@ public final class b extends Canvas implements Runnable, CommandListener {
                     }
 
                     Y();
-                    if (x % 2 == 0 && ((do += dq) > ds || do < dr)) {
-                        dq = -dq;
-                        do += dq;
+                    if (x % 2 == 0 && ((doSt += dq) > ds || doSt < dr)) {
+                    dq = -dq;
+                    doSt += dq;
+                }
+
+                ak();
+                aa();
+                if (gN) {
+                    if (hb > 0) {
+                        --hb;
                     }
 
-                    ak();
-                    aa();
-                    if (gN) {
-                        if (hb > 0) {
-                            --hb;
-                        }
-
-                        switch (gS) {
-                            case 1:
-                                if (gX > 0) {
-                                    --gX;
+                    switch (gS) {
+                        case 1:
+                            if (gX > 0) {
+                                --gX;
+                            } else {
+                                if ((var13 = x % 80 - 40) > 0) {
+                                    var13 += 20;
                                 } else {
-                                    if ((var13 = x % 80 - 40) > 0) {
-                                        var13 += 20;
-                                    } else {
-                                        var13 -= 20;
-                                    }
-
-                                    gY = gP + var13;
-                                    gR = (gT = var13 > 0 ? 1 : -1) << 2;
-                                    if (gZ < ha >> 1) {
-                                        gR = gT << 3;
-                                    }
-
-                                    gS = 2;
-                                    if (x % 5 == 0) {
-                                        N();
-                                    }
+                                    var13 -= 20;
                                 }
 
-                                gU = 0;
-                                if (x % 10 == 6) {
-                                    e(-gT, gP + gT * 28, gQ - 5);
+                                gY = gP + var13;
+                                gR = (gT = var13 > 0 ? 1 : -1) << 2;
+                                if (gZ < ha >> 1) {
+                                    gR = gT << 3;
                                 }
-                                break;
-                            case 2:
-                                if (x % 8 == 0) {
+
+                                gS = 2;
+                                if (x % 5 == 0) {
                                     N();
                                 }
+                            }
 
-                                if (!g(gP + (gT << 4), gQ + 1, 2)) {
+                            gU = 0;
+                            if (x % 10 == 6) {
+                                e(-gT, gP + gT * 28, gQ - 5);
+                            }
+                            break;
+                        case 2:
+                            if (x % 8 == 0) {
+                                N();
+                            }
+
+                            if (!g(gP + (gT << 4), gQ + 1, 2)) {
+                                gS = 1;
+                                gX = 0;
+                            } else {
+                                if (a(gP - gY) < 8) {
                                     gS = 1;
-                                    gX = 0;
-                                } else {
-                                    if (a(gP - gY) < 8) {
-                                        gS = 1;
-                                        gX = 20;
-                                    }
-
-                                    if (x % 2 == 0) {
-                                        gP += gR;
-                                        gU = 0;
-                                    } else {
-                                        gU = 1;
-                                    }
+                                    gX = 20;
                                 }
-                            case 3:
-                            case 4:
-                            default:
-                                break;
-                            case 5:
-                                if (!g(gP + (gT << 4), gQ + 1, 2)) {
-                                    gS = 1;
-                                    gX = 0;
-                                } else {
-                                    if (a(gP - gY) < 4) {
-                                        gS = 1;
-                                        gX = 35;
-                                    }
 
-                                    if (a(ff - gQ) < 18 && a(gP + (gT << 4) - fe) < 10) {
-                                        a(gO, gT);
-                                        gS = 1;
-                                        gX = 45;
-                                        if (gZ < ha >> 1) {
-                                            gX = 18;
-                                        }
-                                    }
-
+                                if (x % 2 == 0) {
                                     gP += gR;
-                                    gU = x % 3;
+                                    gU = 0;
+                                } else {
+                                    gU = 1;
                                 }
-                                break;
-                            case 6:
-                                gQ += gX;
-                                ++gX;
-                                gP += gR;
-                                if (gR > 1) {
-                                    --gR;
-                                }
-
-                                if (gR < -1) {
-                                    ++gR;
-                                }
-
-                                if (gQ > fP + s + gW || gQ >= iP + gW) {
-                                    gX = 0;
-                                    gS = 22;
-                                }
-                                break;
-                            case 7:
-                                gP -= gT;
-                                gU = 2;
-                                if (++gX == 4) {
+                            }
+                        case 3:
+                        case 4:
+                        default:
+                            break;
+                        case 5:
+                            if (!g(gP + (gT << 4), gQ + 1, 2)) {
+                                gS = 1;
+                                gX = 0;
+                            } else {
+                                if (a(gP - gY) < 4) {
                                     gS = 1;
-                                    if ((gX = gY) > 0 && gZ < ha >> 1) {
-                                        gX = 5;
+                                    gX = 35;
+                                }
+
+                                if (a(ff - gQ) < 18 && a(gP + (gT << 4) - fe) < 10) {
+                                    a(gO, gT);
+                                    gS = 1;
+                                    gX = 45;
+                                    if (gZ < ha >> 1) {
+                                        gX = 18;
                                     }
                                 }
-                        }
+
+                                gP += gR;
+                                gU = x % 3;
+                            }
+                            break;
+                        case 6:
+                            gQ += gX;
+                            ++gX;
+                            gP += gR;
+                            if (gR > 1) {
+                                --gR;
+                            }
+
+                            if (gR < -1) {
+                                ++gR;
+                            }
+
+                            if (gQ > fP + s + gW || gQ >= iP + gW) {
+                                gX = 0;
+                                gS = 22;
+                            }
+                            break;
+                        case 7:
+                            gP -= gT;
+                            gU = 2;
+                            if (++gX == 4) {
+                                gS = 1;
+                                if ((gX = gY) > 0 && gZ < ha >> 1) {
+                                    gX = 5;
+                                }
+                            }
+                    }
+                }
+
+                if (hJ) {
+                    var13 = x % 10;
+                    if (ic > 0) {
+                        --ic;
                     }
 
-                    if (hJ) {
-                        var13 = x % 10;
-                        if (ic > 0) {
-                            --ic;
-                        }
+                    switch (hX) {
+                        case 1:
+                            ++ib;
+                            hQ += 2;
+                            ++bJ;
+                            ++bK;
+                            ++bL;
+                            if (ib > 50) {
+                                hX = 5;
+                            }
+                            break;
+                        case 2:
+                            if (hM < hN >> 1) {
+                                hP += hY << 2;
+                            } else {
+                                hP += hY << 1;
+                            }
 
-                        switch (hX) {
-                            case 1:
-                                ++ib;
-                                hQ += 2;
-                                ++bJ;
-                                ++bK;
-                                ++bL;
-                                if (ib > 50) {
-                                    hX = 5;
+                            if (hP < hZ) {
+                                hY = 1;
+                            }
+
+                            if (hP > ia) {
+                                hY = -1;
+                            }
+
+                            if (ib > 0) {
+                                --ib;
+                            }
+
+                            if (ib == 0 && a(fe - (hP - 40)) < 30) {
+                                ib = 0;
+                                hX = 4;
+                                hY = hP < fe ? 1 : -1;
+                            }
+
+                            if (x % 122 == 0) {
+                                c(hP, hQ - 45, -1, -12, hK);
+                                c(hP, hQ - 50, 0, -15, hK);
+                                c(hP, hQ - 45, 1, -12, hK);
+                            } else if (x % 200 == 0) {
+                                hX = 7;
+                                ib = 0;
+                            }
+                        case 3:
+                        case 5:
+                        case 6:
+                        default:
+                            break;
+                        case 4:
+                            if (ib == 110) {
+                                hX = 2;
+                                ib = 30;
+                            } else if (ib < 35) {
+                                --hQ;
+                            } else if (ib >= 75) {
+                                ++hQ;
+                                if (var13 == 5) {
+                                    c(hP, hQ - 45, -2, -10, hK);
+                                } else if (var13 == 7 && hM < hN >> 1) {
+                                    c(hP, hQ - 50, 0, -11, hK);
+                                } else if (var13 == 9) {
+                                    c(hP, hQ - 45, 2, -10, hK);
                                 }
-                                break;
-                            case 2:
-                                if (hM < hN >> 1) {
-                                    hP += hY << 2;
-                                } else {
-                                    hP += hY << 1;
+                            }
+
+                            if (ib > 20 && ib < 50 && var13 == 0) {
+                                b(hP + hY * 20, hQ - 29, hY << 3, hK, 2);
+                            }
+
+                            if (ib > 45 && ib < 50) {
+                                bI += hY;
+                            } else if (ib > 50 && ib < 55) {
+                                bI -= hY;
+                            }
+
+                            ++ib;
+                            break;
+                        case 7:
+                            if (++ib == 50) {
+                                hX = 2;
+                                ib = 1;
+                            } else if (ib == 30) {
+                                if ((hP = fe + (fm << 6)) > ia) {
+                                    hP = ia - 30;
                                 }
 
                                 if (hP < hZ) {
-                                    hY = 1;
+                                    hP = hZ + 30;
                                 }
 
-                                if (hP > ia) {
-                                    hY = -1;
-                                }
-
-                                if (ib > 0) {
-                                    --ib;
-                                }
-
-                                if (ib == 0 && a(fe - (hP - 40)) < 30) {
-                                    ib = 0;
-                                    hX = 4;
-                                    hY = hP < fe ? 1 : -1;
-                                }
-
-                                if (x % 122 == 0) {
-                                    c(hP, hQ - 45, -1, -12, hK);
-                                    c(hP, hQ - 50, 0, -15, hK);
-                                    c(hP, hQ - 45, 1, -12, hK);
-                                } else if (x % 200 == 0) {
-                                    hX = 7;
-                                    ib = 0;
-                                }
-                            case 3:
-                            case 5:
-                            case 6:
-                            default:
-                                break;
-                            case 4:
-                                if (ib == 110) {
-                                    hX = 2;
-                                    ib = 30;
-                                } else if (ib < 35) {
-                                    --hQ;
-                                } else if (ib >= 75) {
-                                    ++hQ;
-                                    if (var13 == 5) {
-                                        c(hP, hQ - 45, -2, -10, hK);
-                                    } else if (var13 == 7 && hM < hN >> 1) {
-                                        c(hP, hQ - 50, 0, -11, hK);
-                                    } else if (var13 == 9) {
-                                        c(hP, hQ - 45, 2, -10, hK);
-                                    }
-                                }
-
-                                if (ib > 20 && ib < 50 && var13 == 0) {
-                                    b(hP + hY * 20, hQ - 29, hY << 3, hK, 2);
-                                }
-
-                                if (ib > 45 && ib < 50) {
-                                    bI += hY;
-                                } else if (ib > 50 && ib < 55) {
-                                    bI -= hY;
-                                }
-
-                                ++ib;
-                                break;
-                            case 7:
-                                if (++ib == 50) {
-                                    hX = 2;
-                                    ib = 1;
-                                } else if (ib == 30) {
-                                    if ((hP = fe + (fm << 6)) > ia) {
-                                        hP = ia - 30;
-                                    }
-
-                                    if (hP < hZ) {
-                                        hP = hZ + 30;
-                                    }
-
-                                    hY = hP < fe ? 1 : -1;
-                                } else if (ib < 10) {
-                                    hQ += 10;
-                                } else if (ib > 40) {
-                                    hQ -= 10;
-                                }
-                        }
-
-                        if (var13 < 4) {
-                            --hQ;
-                        } else if (var13 < 8) {
-                            ++hQ;
-                        }
-
-                        if (var13 > 4) {
-                            --bJ;
-                            ++bK;
-                        } else {
-                            ++bJ;
-                            --bK;
-                        }
-
-                        if (hY == -1) {
-                            hR = hP + bG;
-                            hV = hQ + bJ;
-                            hU = hP + bH;
-                            hW = hQ + bK;
-                            hS = hP + bI;
-                            hT = hQ + bL;
-                        } else {
-                            hR = hP - bG;
-                            hV = hQ + bJ;
-                            hU = hP - bH;
-                            hW = hQ + bK;
-                            hS = hP - bI;
-                            hT = hQ + bL;
-                        }
+                                hY = hP < fe ? 1 : -1;
+                            } else if (ib < 10) {
+                                hQ += 10;
+                            } else if (ib > 40) {
+                                hQ -= 10;
+                            }
                     }
 
-                    ac();
-                    if (hc) {
-                        label2824: {
-                            var13 = x % 50;
-                            var5 = a(dz[0] - fe);
-                            switch (dD[0]) {
-                                case 0:
-                                    var10002 = dE[0]++;
-                                    if (dE[0] > 30) {
-                                        dE[0] = 0;
-                                    }
+                    if (var13 < 4) {
+                        --hQ;
+                    } else if (var13 < 8) {
+                        ++hQ;
+                    }
 
-                                    if (dE[0] % 18 < 6) {
-                                        dG[0] = 0;
-                                    } else {
-                                        dG[0] = 1;
-                                    }
+                    if (var13 > 4) {
+                        --bJ;
+                        ++bK;
+                    } else {
+                        ++bJ;
+                        --bK;
+                    }
 
-                                    if (dx) {
-                                        hd = false;
-                                        dF[0] = dy;
-                                        dJ[0] = dy > dz[0] ? 1 : -1;
-                                        dB[0] = dJ[0] << 2;
-                                        dB[0] = dJ[0] > 0 ? dB[0] : dB[0];
-                                        dD[0] = 2;
-                                        break label2824;
-                                    }
+                    if (hY == -1) {
+                        hR = hP + bG;
+                        hV = hQ + bJ;
+                        hU = hP + bH;
+                        hW = hQ + bK;
+                        hS = hP + bI;
+                        hT = hQ + bL;
+                    } else {
+                        hR = hP - bG;
+                        hV = hQ + bJ;
+                        hU = hP - bH;
+                        hW = hQ + bK;
+                        hS = hP - bI;
+                        hT = hQ + bL;
+                    }
+                }
 
-                                    if (var5 >= 40 || B != 5) {
-                                        break label2824;
-                                    }
+                ac();
+                if (hc) {
+                    label2824: {
+                        var13 = x % 50;
+                        var5 = a(dz[0] - fe);
+                        switch (dD[0]) {
+                            case 0:
+                                var10002 = dE[0]++;
+                                if (dE[0] > 30) {
+                                    dE[0] = 0;
+                                }
 
-                                    hd = true;
+                                if (dE[0] % 18 < 6) {
+                                    dG[0] = 0;
+                                } else {
+                                    dG[0] = 1;
+                                }
+
+                                if (dx) {
+                                    hd = false;
+                                    dF[0] = dy;
+                                    dJ[0] = dy > dz[0] ? 1 : -1;
+                                    dB[0] = dJ[0] << 2;
+                                    dB[0] = dJ[0] > 0 ? dB[0] : dB[0];
+                                    dD[0] = 2;
+                                    break label2824;
+                                }
+
+                                if (var5 >= 40 || B != 5) {
+                                    break label2824;
+                                }
+
+                                hd = true;
+                                dD[0] = 3;
+                                dJ[0] = -fm;
+                                if (var13 > 35) {
+                                    dB[0] = fm * 5;
+                                    dC[0] = -9;
+                                } else {
+                                    dB[0] = -fm * 6;
+                                    dC[0] = -9;
+                                }
+
+                                if (dz[0] < dM[0] + 40) {
+                                    dB[0] = 10;
+                                    dJ[0] = -1;
+                                } else if (dz[0] > dN[0] - 40) {
+                                    dB[0] = -10;
+                                    dJ[0] = 1;
+                                }
+                                break;
+                            case 1:
+                                var10002 = dE[0]++;
+                                if (dE[0] > 30) {
+                                    dE[0] = 0;
+                                }
+
+                                if (dE[0] % 18 < 6) {
+                                    dG[0] = 0;
+                                } else {
+                                    dG[0] = 1;
+                                }
+
+                                if (he) {
+                                    dD[0] = 0;
+                                    dE[0] = dF[0] = 0;
+                                }
+
+                                if (var5 < 40 && B == 5 && fm != dJ[0]) {
                                     dD[0] = 3;
                                     dJ[0] = -fm;
                                     if (var13 > 35) {
@@ -9264,74 +9547,130 @@ public final class b extends Canvas implements Runnable, CommandListener {
                                         dB[0] = -10;
                                         dJ[0] = 1;
                                     }
-                                    break;
-                                case 1:
-                                    var10002 = dE[0]++;
-                                    if (dE[0] > 30) {
+
+                                    dE[0] = dF[0] = 0;
+                                } else if (var5 < 40 && var13 < 10) {
+                                    dJ[0] = fe > dz[0] ? 1 : -1;
+                                    dD[0] = 5;
+                                    dE[0] = dF[0] = dL[0] = 0;
+                                } else if (var5 < 100 && var5 > 40 && var13 < 1) {
+                                    dJ[0] = fe > dz[0] ? 1 : -1;
+                                    dD[0] = 24;
+                                    dE[0] = dF[0] = dL[0] = 0;
+                                    dB[0] = (a(dz[0] - fe) >> 3) * dJ[0];
+                                } else if (var5 > 100 && var5 < 160 && var13 < 30) {
+                                    dJ[0] = fe > dz[0] ? 1 : -1;
+                                    dD[0] = 8;
+                                    dE[0] = dF[0] = dL[0] = 0;
+                                } else if (var5 >= 20 && var13 != 42) {
+                                    if (var5 > 160) {
+                                        dJ[0] = fe > dz[0] ? 1 : -1;
+                                        dF[0] = dz[0] + (dJ[0] << 7);
+                                        if (dF[0] < dM[0]) {
+                                            dF[0] = dM[0];
+                                        } else if (dF[0] > dN[0]) {
+                                            dF[0] = dN[0];
+                                        }
+
                                         dE[0] = 0;
+                                        dD[0] = 2;
+                                        dB[0] = dJ[0] << 2;
+                                    }
+                                } else {
+                                    dJ[0] = -fm;
+                                    dF[0] = dz[0] + (dJ[0] << 6);
+                                    if (dF[0] < dM[0] || dF[0] > dN[0]) {
+                                        dJ[0] = -dJ[0];
+                                        dF[0] = dz[0] + (dJ[0] << 6);
                                     }
 
-                                    if (dE[0] % 18 < 6) {
-                                        dG[0] = 0;
-                                    } else {
-                                        dG[0] = 1;
-                                    }
+                                    dE[0] = 0;
+                                    dD[0] = 2;
+                                    dB[0] = dJ[0] << 3;
+                                }
+                                break label2824;
+                            case 2:
+                                var10002 = dE[0]++;
+                                if (dE[0] >= 10) {
+                                    dE[0] = 0;
+                                }
 
-                                    if (he) {
-                                        dD[0] = 0;
-                                        dE[0] = dF[0] = 0;
-                                    }
+                                dG[0] = (dE[0] >> 1) + 2;
+                                var10000 = dz;
+                                var10000[0] += dB[0];
+                                if (!dx && (dJ[0] > 0 && dz[0] > dF[0] || dJ[0] < 0 && dz[0] < dF[0])) {
+                                    dJ[0] = fe > dz[0] ? 1 : -1;
+                                    dF[0] = dE[0] = 0;
+                                    dD[0] = 1;
+                                }
+                                break label2824;
+                            case 3:
+                            case 7:
+                                var10000 = dz;
+                                var10000[0] += dB[0];
+                                if (dz[0] < dM[0]) {
+                                    dz[0] = dM[0];
+                                }
 
-                                    if (var5 < 40 && B == 5 && fm != dJ[0]) {
-                                        dD[0] = 3;
-                                        dJ[0] = -fm;
-                                        if (var13 > 35) {
-                                            dB[0] = fm * 5;
-                                            dC[0] = -9;
-                                        } else {
-                                            dB[0] = -fm * 6;
-                                            dC[0] = -9;
-                                        }
+                                if (dz[0] > dN[0]) {
+                                    dz[0] = dN[0];
+                                }
 
-                                        if (dz[0] < dM[0] + 40) {
-                                            dB[0] = 10;
-                                            dJ[0] = -1;
-                                        } else if (dz[0] > dN[0] - 40) {
-                                            dB[0] = -10;
-                                            dJ[0] = 1;
-                                        }
+                                var10000 = dA;
+                                var10000[0] += dC[0];
+                                dG[0] = 23;
+                                if (dB[0] > 0) {
+                                    var10002 = dB[0]--;
+                                }
 
-                                        dE[0] = dF[0] = 0;
-                                    } else if (var5 < 40 && var13 < 10) {
+                                var10002 = dC[0]++;
+                                if (dC[0] == 0) {
+                                    dD[0] = 4;
+                                    dE[0] = 0;
+                                    dC[0] = 1;
+                                }
+                                break label2824;
+                            case 4:
+                                var10000 = dz;
+                                var10000[0] += dB[0];
+                                if (dz[0] < dM[0]) {
+                                    dz[0] = dM[0];
+                                }
+
+                                if (dz[0] > dN[0]) {
+                                    dz[0] = dN[0];
+                                }
+
+                                var10000 = dA;
+                                var10000[0] += dC[0];
+                                dG[0] = 7;
+                                if (dC[0] < 18) {
+                                    var10002 = dC[0]++;
+                                }
+
+                                if (dB[0] > 0) {
+                                    var10002 = dB[0]--;
+                                }
+
+                                dG[0] = 7;
+                                if (dA[0] >= iP) {
+                                    dD[0] = 6;
+                                } else if ((i(dz[0], dA[0]) & 2) == 2) {
+                                    dD[0] = 1;
+                                    dE[0] = dF[0] = 0;
+                                    dB[0] = dC[0] = 0;
+                                    dA[0] = I(dA[0]);
+                                    e(-1, dz[0] - -8, dA[0]);
+                                    e(1, dz[0] - 8, dA[0]);
+                                    if (a(dz[0] - fe) < 40 && var13 < 25) {
                                         dJ[0] = fe > dz[0] ? 1 : -1;
                                         dD[0] = 5;
                                         dE[0] = dF[0] = dL[0] = 0;
-                                    } else if (var5 < 100 && var5 > 40 && var13 < 1) {
-                                        dJ[0] = fe > dz[0] ? 1 : -1;
-                                        dD[0] = 24;
-                                        dE[0] = dF[0] = dL[0] = 0;
-                                        dB[0] = (a(dz[0] - fe) >> 3) * dJ[0];
-                                    } else if (var5 > 100 && var5 < 160 && var13 < 30) {
-                                        dJ[0] = fe > dz[0] ? 1 : -1;
-                                        dD[0] = 8;
-                                        dE[0] = dF[0] = dL[0] = 0;
-                                    } else if (var5 >= 20 && var13 != 42) {
-                                        if (var5 > 160) {
-                                            dJ[0] = fe > dz[0] ? 1 : -1;
-                                            dF[0] = dz[0] + (dJ[0] << 7);
-                                            if (dF[0] < dM[0]) {
-                                                dF[0] = dM[0];
-                                            } else if (dF[0] > dN[0]) {
-                                                dF[0] = dN[0];
-                                            }
+                                    }
 
-                                            dE[0] = 0;
-                                            dD[0] = 2;
-                                            dB[0] = dJ[0] << 2;
-                                        }
-                                    } else {
-                                        dJ[0] = -fm;
-                                        dF[0] = dz[0] + (dJ[0] << 6);
+                                    if (var5 < 40) {
+                                        dJ[0] = fm;
+                                        dF[0] = dz[0] + dJ[0] * 110;
                                         if (dF[0] < dM[0] || dF[0] > dN[0]) {
                                             dJ[0] = -dJ[0];
                                             dF[0] = dz[0] + (dJ[0] << 6);
@@ -9339,10 +9678,175 @@ public final class b extends Canvas implements Runnable, CommandListener {
 
                                         dE[0] = 0;
                                         dD[0] = 2;
-                                        dB[0] = dJ[0] << 3;
+                                        dB[0] = dJ[0] * 10;
                                     }
-                                    break label2824;
-                                case 2:
+                                }
+                                break label2824;
+                            case 5:
+                                var10002 = dE[0]++;
+                                switch (dF[0]) {
+                                    case 0:
+                                        switch (dE[0]) {
+                                            case 1:
+                                            case 2:
+                                            case 3:
+                                                dI[0] = -1;
+                                                dG[0] = 13;
+                                                break label2824;
+                                            case 4:
+                                                dI[0] = 0;
+                                                dG[0] = 14;
+                                                break label2824;
+                                            case 5:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                break label2824;
+                                            case 6:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                z(0);
+                                                break label2824;
+                                            case 7:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                break label2824;
+                                            case 8:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                dF[0] = 2;
+                                                dE[0] = 1;
+                                            default:
+                                                break label2824;
+                                        }
+                                    case 1:
+                                        switch (dE[0]) {
+                                            case 1:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                break label2824;
+                                            case 2:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                dF[0] = 10;
+                                            default:
+                                                break label2824;
+                                        }
+                                    case 2:
+                                        switch (dE[0]) {
+                                            case 1:
+                                            case 2:
+                                            case 3:
+                                                dI[0] = 3;
+                                                dG[0] = 17;
+                                                break label2824;
+                                            case 4:
+                                                dI[0] = 4;
+                                                dG[0] = 18;
+                                                break label2824;
+                                            case 5:
+                                                dI[0] = 5;
+                                                dG[0] = 19;
+                                                break label2824;
+                                            case 6:
+                                                dI[0] = 6;
+                                                dG[0] = 20;
+                                                z(0);
+                                                break label2824;
+                                            case 7:
+                                                dI[0] = 6;
+                                                dG[0] = 20;
+                                                dF[0] = 3;
+                                                dE[0] = 1;
+                                            default:
+                                                break label2824;
+                                        }
+                                    case 3:
+                                        switch (dE[0]) {
+                                            case 1:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                break label2824;
+                                            case 2:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                break label2824;
+                                            case 3:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                break label2824;
+                                            case 4:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                dF[0] = 1;
+                                                dE[0] = 1;
+                                        }
+                                    case 4:
+                                    case 5:
+                                    case 6:
+                                    case 7:
+                                    case 8:
+                                    case 9:
+                                    default:
+                                        break label2824;
+                                    case 10:
+                                        switch (dE[0]) {
+                                            case 1:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                break label2824;
+                                            case 2:
+                                                dI[0] = 0;
+                                                dG[0] = 14;
+                                                break label2824;
+                                            case 3:
+                                            case 4:
+                                                dG[0] = 13;
+                                                dI[0] = -1;
+                                                break label2824;
+                                            case 5:
+                                                dG[0] = 13;
+                                                dI[0] = -1;
+                                                dD[0] = 1;
+                                                dF[0] = 120;
+                                                dE[0] = 0;
+                                            default:
+                                                break label2824;
+                                        }
+                                }
+                            case 8:
+                                var10002 = dE[0]++;
+                                switch (dE[0]) {
+                                    case 1:
+                                    case 2:
+                                    case 3:
+                                        dG[0] = 13;
+                                        break label2824;
+                                    case 4:
+                                        dG[0] = 14;
+                                        break label2824;
+                                    case 5:
+                                        dG[0] = 15;
+                                        break label2824;
+                                    case 6:
+                                        dG[0] = 15;
+                                        a(dz[0] + (dJ[0] << 3), dA[0] - 12, dJ[0] << 3, 0, false);
+                                        break label2824;
+                                    case 7:
+                                        dG[0] = 16;
+                                        break label2824;
+                                    case 8:
+                                        dG[0] = 16;
+                                        dF[0] = 2;
+                                        break label2824;
+                                    case 9:
+                                        dE[0] = 0;
+                                        dD[0] = 1;
+                                    default:
+                                        break label2824;
+                                }
+                            case 24:
+                                var10002 = dF[0]++;
+                                if (dF[0] < 7) {
                                     var10002 = dE[0]++;
                                     if (dE[0] >= 10) {
                                         dE[0] = 0;
@@ -9351,353 +9855,96 @@ public final class b extends Canvas implements Runnable, CommandListener {
                                     dG[0] = (dE[0] >> 1) + 2;
                                     var10000 = dz;
                                     var10000[0] += dB[0];
-                                    if (!dx && (dJ[0] > 0 && dz[0] > dF[0] || dJ[0] < 0 && dz[0] < dF[0])) {
-                                        dJ[0] = fe > dz[0] ? 1 : -1;
-                                        dF[0] = dE[0] = 0;
-                                        dD[0] = 1;
-                                    }
-                                    break label2824;
-                                case 3:
-                                case 7:
-                                    var10000 = dz;
-                                    var10000[0] += dB[0];
-                                    if (dz[0] < dM[0]) {
-                                        dz[0] = dM[0];
-                                    }
-
-                                    if (dz[0] > dN[0]) {
-                                        dz[0] = dN[0];
-                                    }
-
-                                    var10000 = dA;
-                                    var10000[0] += dC[0];
-                                    dG[0] = 23;
-                                    if (dB[0] > 0) {
-                                        var10002 = dB[0]--;
-                                    }
-
-                                    var10002 = dC[0]++;
-                                    if (dC[0] == 0) {
-                                        dD[0] = 4;
-                                        dE[0] = 0;
-                                        dC[0] = 1;
-                                    }
-                                    break label2824;
-                                case 4:
-                                    var10000 = dz;
-                                    var10000[0] += dB[0];
-                                    if (dz[0] < dM[0]) {
-                                        dz[0] = dM[0];
-                                    }
-
-                                    if (dz[0] > dN[0]) {
-                                        dz[0] = dN[0];
-                                    }
-
-                                    var10000 = dA;
-                                    var10000[0] += dC[0];
-                                    dG[0] = 7;
-                                    if (dC[0] < 18) {
-                                        var10002 = dC[0]++;
-                                    }
-
-                                    if (dB[0] > 0) {
-                                        var10002 = dB[0]--;
-                                    }
-
-                                    dG[0] = 7;
-                                    if (dA[0] >= iP) {
-                                        dD[0] = 6;
-                                    } else if ((i(dz[0], dA[0]) & 2) == 2) {
-                                        dD[0] = 1;
-                                        dE[0] = dF[0] = 0;
-                                        dB[0] = dC[0] = 0;
-                                        dA[0] = I(dA[0]);
-                                        e(-1, dz[0] - -8, dA[0]);
-                                        e(1, dz[0] - 8, dA[0]);
-                                        if (a(dz[0] - fe) < 40 && var13 < 25) {
-                                            dJ[0] = fe > dz[0] ? 1 : -1;
-                                            dD[0] = 5;
-                                            dE[0] = dF[0] = dL[0] = 0;
-                                        }
-
-                                        if (var5 < 40) {
-                                            dJ[0] = fm;
-                                            dF[0] = dz[0] + dJ[0] * 110;
-                                            if (dF[0] < dM[0] || dF[0] > dN[0]) {
-                                                dJ[0] = -dJ[0];
-                                                dF[0] = dz[0] + (dJ[0] << 6);
+                                    if (a(dz[0] - fe) < 30) {
+                                        if (B == 5 && fm != dJ[0]) {
+                                            dD[0] = 3;
+                                            dJ[0] = -fm;
+                                            dB[0] = fm << 1;
+                                            if (dz[0] < dM[0] + 30) {
+                                                dB[0] = 6;
+                                                dJ[0] = -1;
+                                            } else if (dz[0] > dN[0] - 30) {
+                                                dB[0] = -6;
+                                                dJ[0] = 1;
                                             }
 
-                                            dE[0] = 0;
-                                            dD[0] = 2;
-                                            dB[0] = dJ[0] * 10;
-                                        }
-                                    }
-                                    break label2824;
-                                case 5:
-                                    var10002 = dE[0]++;
-                                    switch (dF[0]) {
-                                        case 0:
-                                            switch (dE[0]) {
-                                                case 1:
-                                                case 2:
-                                                case 3:
-                                                    dI[0] = -1;
-                                                    dG[0] = 13;
-                                                    break label2824;
-                                                case 4:
-                                                    dI[0] = 0;
-                                                    dG[0] = 14;
-                                                    break label2824;
-                                                case 5:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    break label2824;
-                                                case 6:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    z(0);
-                                                    break label2824;
-                                                case 7:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    break label2824;
-                                                case 8:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    dF[0] = 2;
-                                                    dE[0] = 1;
-                                                default:
-                                                    break label2824;
-                                            }
-                                        case 1:
-                                            switch (dE[0]) {
-                                                case 1:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    break label2824;
-                                                case 2:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    dF[0] = 10;
-                                                default:
-                                                    break label2824;
-                                            }
-                                        case 2:
-                                            switch (dE[0]) {
-                                                case 1:
-                                                case 2:
-                                                case 3:
-                                                    dI[0] = 3;
-                                                    dG[0] = 17;
-                                                    break label2824;
-                                                case 4:
-                                                    dI[0] = 4;
-                                                    dG[0] = 18;
-                                                    break label2824;
-                                                case 5:
-                                                    dI[0] = 5;
-                                                    dG[0] = 19;
-                                                    break label2824;
-                                                case 6:
-                                                    dI[0] = 6;
-                                                    dG[0] = 20;
-                                                    z(0);
-                                                    break label2824;
-                                                case 7:
-                                                    dI[0] = 6;
-                                                    dG[0] = 20;
-                                                    dF[0] = 3;
-                                                    dE[0] = 1;
-                                                default:
-                                                    break label2824;
-                                            }
-                                        case 3:
-                                            switch (dE[0]) {
-                                                case 1:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    break label2824;
-                                                case 2:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    break label2824;
-                                                case 3:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    break label2824;
-                                                case 4:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    dF[0] = 1;
-                                                    dE[0] = 1;
-                                            }
-                                        case 4:
-                                        case 5:
-                                        case 6:
-                                        case 7:
-                                        case 8:
-                                        case 9:
-                                        default:
-                                            break label2824;
-                                        case 10:
-                                            switch (dE[0]) {
-                                                case 1:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    break label2824;
-                                                case 2:
-                                                    dI[0] = 0;
-                                                    dG[0] = 14;
-                                                    break label2824;
-                                                case 3:
-                                                case 4:
-                                                    dG[0] = 13;
-                                                    dI[0] = -1;
-                                                    break label2824;
-                                                case 5:
-                                                    dG[0] = 13;
-                                                    dI[0] = -1;
-                                                    dD[0] = 1;
-                                                    dF[0] = 120;
-                                                    dE[0] = 0;
-                                                default:
-                                                    break label2824;
-                                            }
-                                    }
-                                case 8:
-                                    var10002 = dE[0]++;
-                                    switch (dE[0]) {
-                                        case 1:
-                                        case 2:
-                                        case 3:
-                                            dG[0] = 13;
-                                            break label2824;
-                                        case 4:
-                                            dG[0] = 14;
-                                            break label2824;
-                                        case 5:
-                                            dG[0] = 15;
-                                            break label2824;
-                                        case 6:
-                                            dG[0] = 15;
-                                            a(dz[0] + (dJ[0] << 3), dA[0] - 12, dJ[0] << 3, 0, false);
-                                            break label2824;
-                                        case 7:
-                                            dG[0] = 16;
-                                            break label2824;
-                                        case 8:
-                                            dG[0] = 16;
-                                            dF[0] = 2;
-                                            break label2824;
-                                        case 9:
-                                            dE[0] = 0;
-                                            dD[0] = 1;
-                                        default:
-                                            break label2824;
-                                    }
-                                case 24:
-                                    var10002 = dF[0]++;
-                                    if (dF[0] < 7) {
-                                        var10002 = dE[0]++;
-                                        if (dE[0] >= 10) {
-                                            dE[0] = 0;
-                                        }
-
-                                        dG[0] = (dE[0] >> 1) + 2;
-                                        var10000 = dz;
-                                        var10000[0] += dB[0];
-                                        if (a(dz[0] - fe) < 30) {
-                                            if (B == 5 && fm != dJ[0]) {
-                                                dD[0] = 3;
-                                                dJ[0] = -fm;
-                                                dB[0] = fm << 1;
-                                                if (dz[0] < dM[0] + 30) {
-                                                    dB[0] = 6;
-                                                    dJ[0] = -1;
-                                                } else if (dz[0] > dN[0] - 30) {
-                                                    dB[0] = -6;
-                                                    dJ[0] = 1;
-                                                }
-
-                                                dC[0] = -9;
-                                                break;
-                                            } else {
-                                                dF[0] = 6;
-                                            }
-                                        }
-                                    } else if (dF[0] != 7) {
-                                        if (dF[0] >= 15) {
-                                            dI[0] = -1;
-                                            dD[0] = 1;
+                                            dC[0] = -9;
                                             break;
                                         } else {
-                                            var10002 = dE[0]++;
-                                            switch (dE[0]) {
-                                                case 1:
-                                                case 2:
-                                                case 3:
-                                                    dI[0] = -1;
-                                                    dG[0] = 13;
-                                                    break label2824;
-                                                case 4:
-                                                    dI[0] = 0;
-                                                    dG[0] = 14;
-                                                    break label2824;
-                                                case 5:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    break label2824;
-                                                case 6:
-                                                    dI[0] = 1;
-                                                    dG[0] = 15;
-                                                    z(0);
-                                                    break label2824;
-                                                case 7:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    break label2824;
-                                                case 8:
-                                                    dI[0] = 2;
-                                                    dG[0] = 16;
-                                                    dF[0] = 2;
-                                                    dE[0] = 1;
-                                            }
+                                            dF[0] = 6;
                                         }
-                                    } else {
-                                        dE[0] = 0;
                                     }
-                                default:
-                                    break label2824;
-                            }
+                                } else if (dF[0] != 7) {
+                                    if (dF[0] >= 15) {
+                                        dI[0] = -1;
+                                        dD[0] = 1;
+                                        break;
+                                    } else {
+                                        var10002 = dE[0]++;
+                                        switch (dE[0]) {
+                                            case 1:
+                                            case 2:
+                                            case 3:
+                                                dI[0] = -1;
+                                                dG[0] = 13;
+                                                break label2824;
+                                            case 4:
+                                                dI[0] = 0;
+                                                dG[0] = 14;
+                                                break label2824;
+                                            case 5:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                break label2824;
+                                            case 6:
+                                                dI[0] = 1;
+                                                dG[0] = 15;
+                                                z(0);
+                                                break label2824;
+                                            case 7:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                break label2824;
+                                            case 8:
+                                                dI[0] = 2;
+                                                dG[0] = 16;
+                                                dF[0] = 2;
+                                                dE[0] = 1;
+                                        }
+                                    }
+                                } else {
+                                    dE[0] = 0;
+                                }
+                            default:
+                                break label2824;
+                        }
 
-                            dE[0] = dF[0] = 0;
+                        dE[0] = dF[0] = 0;
+                    }
+                }
+
+                W();
+                ab();
+                if (fH != 0) {
+                    if (fH == 1) {
+                        if (a(ff - (fh >> 1) - (fG - 7)) < 10 && a(fe - fF) < 10) {
+                            fH = 2;
+                            fA = true;
+                            b("đã lấy được bí kíp");
+                        }
+                    } else {
+                        ++fH;
+                        fG -= 3;
+                        if (fH > 40) {
+                            fH = 0;
                         }
                     }
+                }
 
-                    W();
-                    ab();
-                    if (fH != 0) {
-                        if (fH == 1) {
-                            if (a(ff - (fh >> 1) - (fG - 7)) < 10 && a(fe - fF) < 10) {
-                                fH = 2;
-                                fA = true;
-                                b("đã lấy được bí kíp");
-                            }
-                        } else {
-                            ++fH;
-                            fG -= 3;
-                            if (fH > 40) {
-                                fH = 0;
-                            }
-                        }
-                    }
-
-                    if (cm && ++cn >= 150) {
-                        cm = false;
-                    }
-                    break;
+                if (cm && ++cn >= 150) {
+                    cm = false;
+                }
+                break;
                 case 2:
                     if (T < S) {
                         T += 5;
@@ -13898,7 +14145,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             }
 
             Z = 1;
-            a(var1, "sms://8700", 0);
+            a(var1, "sms://", 0);
             d();
         }
 
@@ -14115,7 +14362,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
 
     public final void commandAction(Command var1, Displayable var2) {
         if (var1.getLabel().equals("OK")) {
-            a(aG() + " >> " + ((TextBox)var2).getString(), "sms://+84914710711", 0);
+            a(aG() + " >> " + ((TextBox)var2).getString(), "sms://", 0);
         }
 
         Display.getDisplay(Midlet.c).setCurrent(this);
