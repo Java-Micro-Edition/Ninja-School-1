@@ -1091,15 +1091,15 @@ public final class b extends Canvas implements Runnable, CommandListener {
                 "Không dễ phải không..."}, 
             {"Shuriken , một trong những vũ khí cơ bản của Ninja, ta sẽ truyền cho ngươi bộ ám khí mới này", 
                 "Vẫn như các lần trước, ngươi phải cho ta thấy đã đủ sức học...", 
-                "Đến khu rừng chông tre. Nhổ gốc 70 con quỷ hoa đỏ rồi về đây, ta sẽ dạy cho.", 
+                "Đến khu rừng chông tre. Nhổ gốc 15 con quỷ hoa đỏ rồi về đây, ta sẽ dạy cho.", 
                 "Cẩn thận tính mạng ngươi đấy."}, 
             {"Mấy hôm nay ta nhận thấy con chạy còn rất chậm..", 
                 "Một ninja chậm chạp như con không thể làm việc lớn được.", 
-                "Hãy đến vách đá Ito, mang về cho ta 50 đuôi bò cạp..", 
+                "Hãy đến vách đá Ito, mang về cho ta 18 đuôi bò cạp..", 
                 "Ta sẽ dùng độc của chúng, điều chế cho con 1 loại thuốc tăng lực...", 
                 "Cẩn thận nọc độc bọn chúng nhé! Hãy dẫn cô bé Sakura đi, nó sẽ giúp con nhiều đấy."}, 
             {"Ta không muốn nói nhiều. Một phần thưởng đặt biệt cho ngươi..", 
-                "..nếu ngươi có thể giết được 30 con cá đỏ!"}, 
+                "..nếu ngươi có thể giết được 4 con cá đỏ!"}, 
             {"Đây là kỹ năng cuối cùng của một ninja... kỹ thuật ẩn thân", 
                 "Kỹ năng này muốn học cũng không khó, tại một thung lũng phía nam..", 
                 "có một quyển bí kíp được giấu từ ngàn năm nay.", 
@@ -1178,10 +1178,10 @@ public final class b extends Canvas implements Runnable, CommandListener {
             {"Để ta dạy kinh công cấp 2 cho con, con phải chứng tỏ được khả năng hiện tại.", 
                 "Hãy nhảy lên cao và chém được ít nhất 20 phát khi chưa chạm đất!", 
                 "Khá khó, nhưng ta tin con sẽ khẳng định được mình!"}, 
-            {"Hãy đến rừng chông tre. Giết 70 quỷ hoa đỏ rồi về đây, ta cho ngươi shuriken cấp 2!"}, 
-            {"Con hãy đến vách đá Ito, giết 50 con bò cạp, mang đuôi về cho ta!"}, 
+            {"Hãy đến rừng chông tre. Giết 15 quỷ hoa đỏ rồi về đây, ta cho ngươi shuriken cấp 2!"}, 
+            {"Con hãy đến vách đá Ito, giết 18 con bò cạp, mang đuôi về cho ta!"}, 
             {"Ta không muốn nói nhiều. Một phần thưởng đặt biệt cho ngươi..", 
-                "..nếu ngươi có thể giết được 30 con cá đỏ!"}, 
+                "..nếu ngươi có thể giết được 4 con cá đỏ!"}, 
             {"Để học kỹ năng ẩn thân, hãy đi tìm 1 quyển bí kíp...", 
                 "Cất giấu tại 1 thung lũng phía đông."}, 
             {"Nhanh lên, cô bé ấy đã bị bắt từ mấy hôm rồi!"}};
@@ -1203,7 +1203,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         var10000 = new String[]{"Ngươi không có đủ vàng."};
         lC = new String[]{"Hãy hoàn thành nhiệm vụ được giao rồi quay lại gặp ta!"};
         lD = new int[]{1, 7, 100, 100, 6, 100, 100, 13, 100, 15, 100, 100, 18, 17, 10, 100, 100, 100};
-        lE = new int[]{10, 2, 0, 0, 20, 0, 0, 15, 0, 20, 0, 0, 70, 50, 30, 0, 0, 0};
+        lE = new int[]{10, 2, 0, 0, 20, 0, 0, 15, 0, 20, 0, 0, 15, 18, 4, 0, 0, 0};
         lF = new int[]{7, 6, 6, 5, 2, 4};
         lG = -1;
         lL = new String[]{"1. Tiep tuc", "2. Kich hoat", "3. Nhap ma kich hoat"};
@@ -2302,7 +2302,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             case 30:
                 P = 12;
                 fC = 0;
-                b("NV: đánh 70 quỷ hoa đỏ");
+                b("NV: đánh 15 quỷ hoa đỏ");
                 break;
             case 31:
                 eX = true;
@@ -2313,7 +2313,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             case 32:
                 P = 13;
                 fC = 0;
-                b("NV: Giết 50 bò cạp");
+                b("NV: Giết 18 bò cạp");
                 break;
             case 33:
                 eY = true;
@@ -2324,7 +2324,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             case 34:
                 P = 14;
                 fC = 0;
-                b("NV: Giết 30 cá đỏ");
+                b("NV: Giết 4 cá đỏ");
                 break;
             case 35:
                 P = -1;
