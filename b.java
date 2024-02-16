@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.io.IOException;
 import java.io.InputStream;
 import javax.microedition.lcdui.Canvas;
