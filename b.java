@@ -25,25 +25,25 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int[] aj = new int[]{50, 150, 240, 400, 600, 800, 1000, 1500, 2000, 3000, 5000, 7000, 9000, 12000, 15000, 19000, 26000, 32000, 40000, 50000, 60000, 70000, 80000, 90000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000};
     private static int[] ak = new int[]{20, 20, 20, 20, 30, 30, 30, 40, 40, 50, 60, 70, 80, 80, 90, 90, 100, 120, 130, 150, 160, 170, 180, 190, 200, 210, 220, 250, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300};
     private static String[] al = new String[]{"Ma một mắt", 
-        "ốc sên", 
-        "Dơi quỷ", 
-        "Quỷ một chân", 
-        "Cóc xanh", 
-        "Nhện", 
-        "Ong bò vẽ", 
-        "Bù nhìn rơm", 
-        "Cá cọp", 
-        "Ninja gió", 
-        "Cá cọp đỏ", 
-        "Ma một mắt", 
-        "Rết sa mạc", 
-        "Dơi vàng", 
-        "Chuột", 
-        "Thổ dân", 
-        "Ong đỏ", 
-        "Bò cạp", 
-        "Quỷ hoa", 
-        "Quỷ tử hoa"};
+            "ốc sên", 
+            "Dơi quỷ", 
+            "Quỷ một chân", 
+            "Cóc xanh", 
+            "Nhện", 
+            "Ong bò vẽ", 
+            "Bù nhìn rơm", 
+            "Cá cọp", 
+            "Ninja gió", 
+            "Cá cọp đỏ", 
+            "Ma một mắt", 
+            "Rết sa mạc", 
+            "Dơi vàng", 
+            "Chuột", 
+            "Thổ dân", 
+            "Ong đỏ", 
+            "Bò cạp", 
+            "Quỷ hoa", 
+            "Quỷ tử hoa"};
     private static int[] am = new int[]{140, 70, 150, 120, 150, 150, 60, 1000, 250, 500, 4000, 500, 600, 1000, 1500, 2000, 1000, 3500, 1500, 5500};
     private static int[] an = new int[]{15, 10, 30, 25, 25, 25, 5, 10, 20, 40, 30, 40, 130, 30, 40, 100, 60, 160, 120, 200};
     private static int[] ao = new int[]{35, 20, 55, 40, 45, 50, 30, 130, 60, 65, 70, 75, 120, 85, 100, 120, 140, 160, 180, 200};
@@ -63,10 +63,10 @@ public final class b extends Canvas implements Runnable, CommandListener {
     private static int[] aC = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 4, 0, 3, 0, 6, 0, 2, 0, 5, 0, 4, 0, 1, 0, 3, 0, 0, 0, 5, 0, 4, 0, 3, 0, 2, 0, 2, 0, 1, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 2, 1, 3, 2, 2};
     private static int[] aD = new int[]{0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 2, 0, 2, 3, 0, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 4, 0, 4, 0, 1, 2, 1, 2, 0, 1, 2, 1, 2, 1, 2};
     private static String[] aE = new String[]{"Chơi mới", 
-        "Chơi tiếp", 
-        "Chỉ dẫn", 
-        "Game khác", 
-        "Thoát"};
+            "Chơi tiếp", 
+            "Chỉ dẫn", 
+            "About Us", 
+            "Thoát"};
     private static String[][] aF = new String[][]{{"Rừng trúc đây rồi!", 
             "Hôm nay ta phải hạ được con lon đó!", 
             "Nó chắc quanh quẩn đây thôi!"}, 
@@ -152,7 +152,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         {"Vậy chúng ta ăn cắp lại code của chúng nó ở đâu?"}, 
         {"Trên Page FB DuriuStudio chúng nó hay đăng code với mấy cái xàm vl!"}, 
         {"Tốt, các con có thể giải tán!"}, 
-        {"Chúng con chào thầy !"}, 
+        {"Chúng con chào thầy!"}, 
         {"Cảm ơn, mi thật tốt bụng. Hẹn gặp lại!", 
             "Quên mất, lúc nãy cô Ayumi dặn ta gặp cô ấy ngay.", 
             "Hihi, gặp lại mi sau!"}, 
@@ -10168,7 +10168,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
                                 (new Thread(Midlet.c)).start();
                             } else if (aX == 3) {
                                 try {
-                                    Midlet.c.platformRequest("http://wap.teamobi.com/");
+                                    Midlet.c.platformRequest("https://www.facebook.com/duriustudio");
                                 } catch (Exception var10) {
                                 }
                             } else if (aX == 4) {
