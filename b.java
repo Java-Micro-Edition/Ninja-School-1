@@ -1068,7 +1068,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
                 "Đi đi, chúc ngươi may mắn."}, 
             {"Con biết, ta đang nghiên cứu làm ra 1 thứ thuốc, để chữa trị vết thương...", 
                 "Tuy nhiên ta thiếu 1 loại nguyên liệu rất khó kiếm.", 
-                "Nếu con có thể tìm giúp ta 15 cánh dơi vàng, ta sẽ có đền đáp xứng đáng.", 
+                "Nếu con có thể tìm giúp ta 8 cánh dơi vàng, ta sẽ có đền đáp xứng đáng.", 
                 "Bọn dơi vàng có mặt ở những ngôi đền phía nam. Bọn chúng rất nhanh.", 
                 "Tuy thế, ta vẫn tin con có thể mang về cho ta.", "Chúc con may mắn!"}, 
             {"Cô Ayumi nói cho con nghe rồi à...", 
@@ -1078,7 +1078,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
                 "Con là một học sinh tốt, hãy đi tìm bọn chúng bắt về cho ta.", 
                 "Làm đi, rồi báo cáo kết quả với ta nhé!"}, 
             {"Cô bé em gái cô Ayumi cũng xinh, y như cô ấy vậy, con có thấy thế không!", 
-                "Nếu con có thể vào khu rừng gỗ, đánh gục 20 tên Quỷ khố, ta sẽ mai mối cho, haha!", 
+                "Nếu con có thể vào khu rừng gỗ, đánh gục 10 tên Quỷ khố, ta sẽ mai mối cho, haha!", 
                 "Nhưng hãy cẩn thận, bọn quái vật trong khu rừng ấy rất đông và mạnh đấy!"}, 
             {"Hiện tại khả năng con đã rất khá rồi, ta quyết định dạy những kỹ năng cấp cao cho con.", 
                 "Đầu tiên là khinh công cấp 2.", "Tuy nhiên, con phải chứng tỏ đã thành thạo khinh công cấp 1 trước...", 
@@ -1165,10 +1165,10 @@ public final class b extends Canvas implements Runnable, CommandListener {
             {"Hãy trở lại khi ngươi đã giết đủ 20 con ong."}, 
             {"Con heo rừng rất nguy hiểm. Nhưng ta tin ngươi có thể giết được nó và cầm về cho ta quyển bí kíp. Đi đi!"}, 
             {"Hãy đến khu nghĩa địa bên kia sông! Mang về quyển bí kíp. Nhanh lên!"}, 
-            {"Nhanh lên, hãy giết 15 con dơi vàng ở những ngôi miếu phía nam!"}, 
+            {"Nhanh lên, hãy giết 8 con dơi vàng ở những ngôi miếu phía nam!"}, 
             {"Hãy tìm tên Toniku, hắn trốn ở những ngôi miếu phía nam.", 
                 "Tìm gặp hắn quay lại báo cáo với ta nhé!"}, 
-            {"Hãy giết 20 con quỷ khố ở khu rừng gỗ!", 
+            {"Hãy giết 10 con quỷ khố ở khu rừng gỗ!", 
                 "Xong việc ta sẽ giúp con cưa con bé em gái cô giáo Ayumi!"}, 
             {"Để ta dạy kinh công cấp 2 cho con, con phải chứng tỏ được khả năng hiện tại.", 
                 "Hãy nhảy lên cao và chém được ít nhất 20 phát khi chưa chạm đất!", 
@@ -1198,7 +1198,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
         var10000 = new String[]{"Ngươi không có đủ vàng."};
         lC = new String[]{"Hãy hoàn thành nhiệm vụ được giao rồi quay lại gặp ta!"};
         lD = new int[]{1, 7, 100, 100, 6, 100, 100, 13, 100, 15, 100, 100, 18, 17, 10, 100, 100, 100};
-        lE = new int[]{10, 2, 0, 0, 20, 0, 0, 15, 0, 20, 0, 0, 15, 18, 4, 0, 0, 0};
+        lE = new int[]{10, 2, 0, 0, 20, 0, 0, 8, 0, 10, 0, 0, 15, 18, 4, 0, 0, 0};
         lF = new int[]{7, 6, 6, 5, 2, 4};
         lG = -1;
         lL = new String[]{"1. Tiep tuc", "2. Kich hoat", "3. Nhap ma kich hoat"};
@@ -2210,7 +2210,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             case 18:
                 P = 7;
                 fC = 0;
-                b("NV: giết 15 dơi vàng");
+                b("NV: giết 8 dơi vàng");
                 break;
             case 19:
                 eR = true;
@@ -2247,7 +2247,7 @@ public final class b extends Canvas implements Runnable, CommandListener {
             case 24:
                 P = 9;
                 fC = 0;
-                b("NV: giết 20 thổ dân");
+                b("NV: giết 10 thổ dân");
                 break;
             case 25:
                 eT = true;
